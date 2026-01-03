@@ -266,6 +266,8 @@
   },
   "active": "655b99d7e62837ee",
   "lastOpenFiles": [
+    "README.md",
+    "Linux copy.md",
     "Linux",
     "debianConfig/serviceConfigurations/dhcp.md",
     "debianConfig/debianConfig.md",
@@ -297,12 +299,10 @@
     "vbox/vboxManage/createvm.md",
     "vbox/vboxManage/showmediuminfo.md",
     "vbox/vboxManage/startvm.md",
-    "vbox/vboxManage/snapshot.md",
     "activities/vbox",
     "Untitled",
     "activities",
     "ipAddresses",
-    "installation",
     "Untitled.canvas"
   ]
 }
