@@ -1,7 +1,7 @@
 DHCP Automatically assigns IP addresses and network settings to devices on a network.
 # Index
-- [Primary](debianConfig/serviceConfigurations/dhcp/basicPrimary)
-- [Secondary](debianConfig/serviceConfigurations/dhcp/basicSecondary)
+- [Primary](debianConfig/serviceConfigurations/dhcp/basicPrimary.md)
+- [Secondary](debianConfig/serviceConfigurations/dhcp/basicSecondary.md)
 
 # File index
 

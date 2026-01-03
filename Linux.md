@@ -1,7 +1,7 @@
 This is an Obsidian vault where I will take my notes for the subject Linux
 # Index
-- [IP addresses](ipAddresses/ipAddresses)
-- [Vbox](vbox/vbox)
-- [Installation](installation/installation)
-- [Debian Configurations](debianConfig/debianConfig)
-- [Activities](activities/activities)
+- [IP addresses](ipAddresses/ipAddresses.md)
+- [Vbox](vbox/vbox.md)
+- [Installation](installation/installation.md)
+- [Debian Configurations](debianConfig/debianConfig.md)
+- [Activities](activities/activities.md)
