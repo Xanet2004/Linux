@@ -5,8 +5,8 @@ First we need to have access to the internet, so check out: [networkInterfaces](
 To connect to the machine via ssh, we need to define some redirections.
 
 We have two methods for this:
-1. [NAT Port forwarding](vbox/vboxManage/modifyvm.md)
-2. [NAT Network Port forwarding](vbox/vboxManage/natnetwork.md)
+1. [NAT Port forwarding](/vbox/vboxManage/modifyvm.md)
+2. [NAT Network Port forwarding](/vbox/vboxManage/natnetwork.md)
 
 # Installation
 
