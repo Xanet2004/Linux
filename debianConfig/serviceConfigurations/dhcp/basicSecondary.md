@@ -7,7 +7,7 @@
 # Basic configuration
 
 ```powershell title="/etc/default/isc-dhcp-server"
-INTERFACESv4="enp0s3"  # replace with your network interface
+INTERFACESv4="enp0s18"  # This will be the interface that DHCP will look
 INTERFACESv6=""
 ```
 

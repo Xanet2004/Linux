@@ -15,7 +15,7 @@
               "type": "markdown",
               "state": {
                 "file": "Linux.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "pinned": true,
@@ -31,7 +31,7 @@
               "type": "markdown",
               "state": {
                 "file": "debianConfig/debianConfig.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "pinned": true,
@@ -70,21 +70,35 @@
             }
           },
           {
-            "id": "2d7a7c011824fa09",
+            "id": "455ef118d3992873",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "debianConfig/serviceConfigurations/dhcp.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "dhcp"
             }
+          },
+          {
+            "id": "cd58c0b021af835b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "dhcpd.conf"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -157,8 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "3bda3df6b02d79ee",
@@ -264,22 +277,29 @@
       "bases:Create new base": false
     }
   },
-  "active": "655b99d7e62837ee",
+  "active": "cd58c0b021af835b",
   "lastOpenFiles": [
+    "debianConfig/configurationFiles/etc/default/isc-dhcp-server.md",
+    "debianConfig/serviceConfigurations/dhcp.md",
+    "debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md",
+    "debianConfig/debianConfig.md",
+    "activities/vbox/01-zaldua1.md",
+    "activities/activities.md",
+    "Linux.md",
+    "ipAddresses/ipAddresses.md",
+    "WhatsApp Sticker 2026-01-03 at 22.55.17",
+    "debianConfig/configurationFiles/etc/dhcp",
+    "debianConfig/configurationFiles/etc/default",
+    "debianConfig/configurationFiles/etc/network/interfaces.md",
+    "debianConfig/serviceConfigurations/dhcp/basicSecondary.md",
+    "debianConfig/serviceConfigurations/dhcp/basicPrimary.md",
+    "vbox/vboxManage/modifyvm.md",
+    "vbox/vbox.md",
+    "activities/vbox/02-archLinux.md",
     "README.md",
     "Linux copy.md",
     "Linux",
-    "debianConfig/serviceConfigurations/dhcp.md",
-    "debianConfig/debianConfig.md",
-    "debianConfig/configurationFiles/etc/network/interfaces.md",
-    "Linux.md",
-    "activities/vbox/01-zaldua1.md",
-    "activities/vbox/02-archLinux.md",
     "vbox/vboxManage/storagectl.md",
-    "vbox/vbox.md",
-    "activities/activities.md",
-    "debianConfig/serviceConfigurations/dhcp/basicPrimary.md",
-    "debianConfig/serviceConfigurations/dhcp/basicSecondary.md",
     "debianConfig/serviceConfigurations/dhcp",
     "garitanoJauntxikGorena.png",
     "debianConfig/serviceConfigurations/dns.md",
@@ -287,7 +307,6 @@
     "debianConfig/serviceConfigurations/networkInterfaces.md",
     "vbox/vboxManage/clonevm.md",
     "debianConfig/configurationFiles/etc/hostname.md",
-    "vbox/vboxManage/modifyvm.md",
     "vbox/vboxManage/showvminfo.md",
     "debianConfig/serviceConfigurations/openssh.md",
     "vbox/vboxManage/natnetwork.md",
@@ -296,13 +315,7 @@
     "debianConfig/configurationFiles",
     "vbox/vboxManage/createmedium.md",
     "debianConfig/serviceConfigurations",
-    "vbox/vboxManage/createvm.md",
-    "vbox/vboxManage/showmediuminfo.md",
-    "vbox/vboxManage/startvm.md",
     "activities/vbox",
-    "Untitled",
-    "activities",
-    "ipAddresses",
     "Untitled.canvas"
   ]
 }

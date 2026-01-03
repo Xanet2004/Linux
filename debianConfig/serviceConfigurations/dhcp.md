@@ -5,8 +5,8 @@ DHCP Automatically assigns IP addresses and network settings to devices on a net
 
 # File index
 
-- /etc/default/isc-dhcp-server – Specifies interfaces to serve
-- /etc/dhcp/dhcpd.conf – Main DHCP configuration file    
+- [/etc/default/isc-dhcp-server](/debianConfig/configurationFiles/etc/default/isc-dhcp-server.md) – Specifies interfaces to serve
+- [/etc/dhcp/dhcpd.conf](dhcpd.conf.md) – Main DHCP configuration file
 
 # Installation
 
@@ -14,31 +14,41 @@ DHCP Automatically assigns IP addresses and network settings to devices on a net
 apt update
 apt-get install isc-dhcp-server
 ```
-# Basic configuration
+# Basic configuration example
 
 ```powershell title="/etc/default/isc-dhcp-server"
-INTERFACESv4="enp0s3"  # replace with your network interface
+INTERFACESv4="enp0s18"  # This will be the interface that DHCP will look
 INTERFACESv6=""
 ```
 
 ```powershell title="/etc/dhcp/dhcpd.conf"
-option domain-name "zaldua.eus";
-option domain-name-servers 192.168.42.2, 192.168.44.4;
+# option domain-name "zalduabat.eus";
+# option domain-name-servers 192.168.42.2, 192.168.44.4;
 
-default-lease-time 600;
-max-lease-time 7200;
+authoritative;
 
 # Subnet 1: 192.168.42.0/23
 subnet 192.168.42.0 netmask 255.255.254.0 {
     range 192.168.42.100 192.168.42.200;
+    option domain-name-servers 192.168.42.4, 192.168.44.5;
+    option domain-name "zalduabat.eus";
     option routers 192.168.42.2;
     option broadcast-address 192.168.43.255;
+    default-lease-time 60;
+    max-lease-time 720;
 }
 
 # Subnet 2: 192.168.44.0/23
 subnet 192.168.44.0 netmask 255.255.254.0 {
     range 192.168.44.100 192.168.44.200;
+	option domain-name-servers 192.168.42.4, 192.168.44.5;
+    option domain-name "zalduabat.eus";
     option routers 192.168.44.2;
     option broadcast-address 192.168.45.255;
+	default-lease-time 60;
+    max-lease-time 720;
 }
 ```
+
+> Important!
+> If there is a second DHCP server in Subnet 2, we MUST remove or comment the subnet 2 from the first server.

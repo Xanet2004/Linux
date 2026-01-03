@@ -17,3 +17,7 @@ In the other hand, configuration files will gather and explain all configuration
 	- /network
 		- /[interfaces](/debianConfig/configurationFiles/etc/network/interfaces.md)
 	- /[hostname](/debianConfig/configurationFiles/etc/hostname.md)
+	- /default
+		- /[isc-dhcp-server](/debianConfig/configurationFiles/etc/default/isc-dhcp-server.md)
+	- /dhcp
+		- /[dhcpd.conf](dhcpd.conf.md)
