@@ -26,7 +26,6 @@ failover peer "dhcp-failover" {
     peer port 647;
     max-response-delay 60;
     max-unacked-updates 10;
-    split 128;                  # same split as primary
 }
 
 # Subnet 1: 192.168.42.0/23

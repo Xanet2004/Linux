@@ -218,9 +218,9 @@ host passacaglia {
 - Example: you can boot a host via PXE with a specific kernel or filename.
 
 ```powershell
-host fantasia { 
+host zaldua1bez1 { 
   hardware ethernet 08:00:07:26:c0:a5; 
-  fixed-address fantasia.example.com; 
+  fixed-address 192.168.44.23;
 }
 ```
 
@@ -238,7 +238,7 @@ failover peer "zaldua-dhcp-failover" {
   primary;                     # This server is the primary
   address 192.168.42.4;        # IP of the primary server
   port 647;                    # Port used for failover
-  peer address 192.168.42.5;   # IP of the secondary server
+  peer address 192.168.44.5;   # IP of the secondary server
   peer port 847;               # Port used by the secondary
   max-response-delay 60;       # Maximum response delay between peers
   max-unacked-updates 10;      # Maximum number of unacknowledged updates
@@ -281,7 +281,7 @@ subnet 192.168.44.0 netmask 255.255.254.0 {
 }
 ```
 
-### Apply to subnets without pool
+### Apply to subnets with pool
 
 ```powershell
 # Subnet 1 with pool

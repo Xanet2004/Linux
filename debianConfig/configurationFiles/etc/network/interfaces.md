@@ -51,18 +51,18 @@ iface enp8s0 inet manual
 
 auto bond0 -> Para conectar las interfaces mediante el uso de slaves
 iface bond0 inet manual
-        slaves enp4s0 enp8s0
-        bond-mode 802.3ad
+	slaves enp4s0 enp8s0
+	bond-mode 802.3ad
 
 auto br0
 iface br0 inet static
-        address 192.168.1.17
-        netmask 255.255.255.0
-        network 192.168.1.0
-        broadcast 192.168.1.255
-        gateway 192.168.1.1
-        bridge_ports bond0 -> Definir bridge en las interfaces necesarias
-        bridge_stp off
-        bridge_fd 0
-        bridge_maxwait 0
+	address 192.168.1.17
+	netmask 255.255.255.0
+	network 192.168.1.0
+	broadcast 192.168.1.255
+	gateway 192.168.1.1
+	bridge_ports bond0 -> Definir bridge en las interfaces necesarias
+	bridge_stp off
+	bridge_fd 0
+	bridge_maxwait 0
 ```

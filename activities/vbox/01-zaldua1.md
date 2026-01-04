@@ -84,6 +84,7 @@ zaldua2: 192.168.44.0/23
 # Used vbox commands
 
 We will create zaldua1zerb1 and then clone it. This way, we don't need to make through the installation process for every machine.
+
 ```powershell title="network"
 # NETWORK CONF
 # network creation
