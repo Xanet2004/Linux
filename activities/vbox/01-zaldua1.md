@@ -384,6 +384,16 @@ subnet 192.168.44.0 netmask 255.255.254.0 {
   default-lease-time 60;
   max-lease-time 720;
 }
+
+host zaldua1bez1 { # Important to declare same hosts on both master and slave servers, could throw errors
+  hardware ethernet 00:01:02:03:01:17;
+  fixed-address 192.168.42.10;
+}
+
+host zaldua2bez1 {
+  hardware ethernet 00:01:02:03:02:17;
+  fixed-address 192.168.44.10;
+}
 ```
 
 ```powershell title="zaldua1zerb1 - installation"
@@ -442,6 +452,16 @@ subnet 192.168.42.0 netmask 255.255.254.0 {
     default-lease-time 60;
     max-lease-time 720;
 }
+
+host zaldua1bez1 { # Important to declare same hosts on both master and slave servers, could throw errors
+  hardware ethernet 00:01:02:03:01:17;
+  fixed-address 192.168.42.10;
+}
+
+host zaldua2bez1 {
+  hardware ethernet 00:01:02:03:02:17;
+  fixed-address 192.168.44.10;
+}
 ```
 
 ## DNS
@@ -451,8 +471,7 @@ apt update
 apt install bind9 bind9-dnsutils
 ```
 
-Estructura general:
-
+General structure:
 - **zalduabat (192.168.42.0/23)**
     → `42.168.192.in-addr.arpa`
     → `43.168.192.in-addr.arpa`
@@ -460,6 +479,7 @@ Estructura general:
 - **zalduabi (192.168.44.0/23)**
     → `44.168.192.in-addr.arpa`  
     → `45.168.192.in-addr.arpa`
+### zaldua1zerb1 as Master
 
 ```powershell title="zaldua1zerb1 - /etc/bind/named.conf.options"
 options {
@@ -540,7 +560,7 @@ $TTL 86400
 @       IN  NS  serv1.zalduabat.eus.
 
 serv1   IN  A   192.168.42.4
-client1 IN  A   192.168.42.101
+client1 IN  A   192.168.42.10
 ```
 ```powershell title="zaldua1zerb1 - /etc/bind/zalduabi.db"
 $TTL 86400
@@ -555,7 +575,7 @@ $TTL 86400
 
 serv1   IN  A   192.168.44.4
 serv2   IN  A   192.168.44.5
-client2 IN  A   192.168.44.101
+client2 IN  A   192.168.44.10
 ```
 
 ```powershell title="zaldua1zerb1 - /etc/bind/db.192.168.42"
@@ -570,7 +590,7 @@ $TTL 86400
 @   IN  NS  serv1.zalduabat.eus.
 
 4   IN  PTR serv1.zalduabat.eus.
-101 IN  PTR client1.zalduabat.eus.
+10 IN  PTR client1.zalduabat.eus.
 ```
 ```powershell title="zaldua1zerb1 - /etc/bind/db.192.168.43"
 $TTL 86400
@@ -597,7 +617,7 @@ $TTL 86400
 
 4   IN  PTR serv1.zalduabi.eus.
 5   IN  PTR serv2.zalduabi.eus.
-101 IN  PTR client2.zalduabi.eus.
+10 IN  PTR client2.zalduabi.eus.
 ```
 ```powershell title="zaldua1zerb1 - /etc/bind/db.192.168.45"
 $TTL 86400
@@ -610,6 +630,24 @@ $TTL 86400
 
 @   IN  NS  serv1.zalduabi.eus.
 ```
+
+Changing DHCP default DNS config for clients
+
+```powershell title="zaldua1zerb1 - /etc/dhcp/dhcpd.conf"
+option domain-name "zaldua.eus";
+option domain-name-servers serv1.zalduabat.eus, serv2.zalduabi.eus;
+...
+```
+
+Changing DHCP default DNS config on the server
+
+```powershell title="zaldua1zerb1 - /etc/dhcpcd.conf"
+...
+interface enp0s3
+static domain_name_servers=127.0.0.1 8.8.8.8
+```
+
+### zaldua2zerb1 as Slave
 
 ```powershell title="zaldua2zerb1 - installation"
 apt update
@@ -691,6 +729,32 @@ zone "45.168.192.in-addr.arpa" {
     masters { 192.168.44.4; };
 };
 ```
+
+Changing DHCP default DNS config for clients
+
+```powershell title="zaldua2zerb1 - /etc/dhcp/dhcpd.conf"
+option domain-name "zaldua.eus";
+option domain-name-servers serv1.zalduabat.eus, serv2.zalduabi.eus;
+...
+```
+
+Changing DHCP default DNS config on the server
+
+```powershell title="zaldua2zerb1 - /etc/dhcpcd.conf"
+...
+interface enp0s3
+static domain_name_servers=192.168.44.4 127.0.0.1 8.8.8.8
+```
+
+## zaldua1zerb1 as router?
+## zaldua1zerb1 as router?
+## zaldua1zerb1 as router?
+## zaldua1zerb1 as router?
+## zaldua1zerb1 as router?
+## zaldua1zerb1 as router?
+## zaldua1zerb1 as router?
+## zaldua1zerb1 as router?
+## zaldua1zerb1 as router?
 
 ## LDAP
 

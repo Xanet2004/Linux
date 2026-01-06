@@ -11,6 +11,7 @@ In the other hand, configuration files will gather and explain all configuration
 - [openssh](/debianConfig/serviceConfigurations/openssh.md)
 - [dhcp](/debianConfig/serviceConfigurations/dhcp.md)
 - [dns](/debianConfig/serviceConfigurations/dns.md)
+- [routing](/debianConfig/serviceConfigurations/routing.md)
 - [ldap](/debianConfig/serviceConfigurations/ldap.md)
 - [www](/debianConfig/serviceConfigurations/www.md)
 - [docker](/debianConfig/serviceConfigurations/docker.md)
@@ -21,7 +22,7 @@ In the other hand, configuration files will gather and explain all configuration
 # Index - Configuration files
 `network interfaces - openssh`
 - /etc
-	- /[dhcpcd.conf](dhcpcd.conf.md) - Change DNS on this file after configuring a DNS server IF **this is a DHCP server**.
+	- /[dhcpcd.conf](/debianConfig/configurationFiles/etc/dhcpcd.conf.md) - Change DNS on this file after configuring a DNS server IF **this is a DHCP server**.
 	- /[resolv.conf](/debianConfig/configurationFiles/etc/resolv.conf.md) - Change DNS on this file after configuring a DNS server IF **this is *NOT* a DHCP server** (it will be automatically changed by [dhcpd.conf])
 	- /network
 		- /[interfaces](/debianConfig/configurationFiles/etc/network/interfaces.md)
@@ -37,6 +38,8 @@ In the other hand, configuration files will gather and explain all configuration
 		- /[named.conf.local](/debianConfig/configurationFiles/etc/bind/named.conf.local.md)
 		- /[exampleDomainName.db](/debianConfig/configurationFiles/etc/bind/exampleDomainName.db.md) - E.g. /zalduabat.db
 		- /[db.reversedIp](/debianConfig/configurationFiles/etc/bind/db.reversedIp.md) - E.g. /db.192.168.42
+`routing`
+	- /[sysctl.conf](/debianConfig/configurationFiles/etc/sysctl.conf.md)
 `ldap`
 `www`
 `docker`

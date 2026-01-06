@@ -30,6 +30,7 @@ Methods:
       - gateway `<gateway>`
       - dns-nameservers `<DNS>` (optional)
       - bridge_ports `<interfaces>`  # Connect multiple ports on the same network (like sharing switch ports)
+      - persistent routes # up ip route add 192.168.42.0/23 via 192.168.44.4
 
   - dhcp
       - (can include dns-nameservers if you want custom DNS)
@@ -65,4 +66,15 @@ iface br0 inet static
 	bridge_stp off
 	bridge_fd 0
 	bridge_maxwait 0
+```
+
+# Persistent route
+
+```powershell title="persistent route example"
+allow-hotplug enp0s18
+iface enp0s18 inet static
+   address 192.168.44.5/23
+   gateway 192.168.44.4 # Server1 as router
+   up ip route add 192.168.42.0/23 via 192.168.44.4
+   # For devices going to 192.168.42.0 go through 192.168.44.4
 ```

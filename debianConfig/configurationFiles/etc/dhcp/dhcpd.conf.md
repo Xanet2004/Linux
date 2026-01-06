@@ -111,8 +111,8 @@ authoritative;
 
 ```powershell
 # option definitions common to all supported networks... 
-# option domain-name "example.org"; 
-# option domain-name-servers ns1.example.org, ns2.example.org;  
+option domain-name "example.org"; 
+option domain-name-servers ns1.example.org, ns2.example.org;  
 default-lease-time 600; 
 max-lease-time 7200;
 ```
@@ -210,7 +210,7 @@ subnet 10.254.239.32 netmask 255.255.255.224 {
 # Host Declarations
 
 ```powershell
-host passacaglia { 
+host passacaglia { # Important to declare same hosts on both master and slave servers, could throw errors
   hardware ethernet 0:0:c0:5d:bd:95; 
   filename "vmunix.passacaglia"; 
   server-name "toccata.example.com"; 
@@ -221,7 +221,7 @@ host passacaglia {
 - Example: you can boot a host via PXE with a specific kernel or filename.
 
 ```powershell
-host zaldua1bez1 { 
+host zaldua1bez1 { # Important to declare same hosts on both master and slave servers, could throw errors
   hardware ethernet 08:00:07:26:c0:a5; 
   fixed-address 192.168.44.23;
 }
