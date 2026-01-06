@@ -23,5 +23,6 @@ In the other hand, configuration files will gather and explain all configuration
 		- /[dhcpd.conf](/debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md)
 	- /bind
 		- /[named.conf.options](/debianConfig/configurationFiles/etc/bind/named.conf.options.md)
+		- /[named.conf.local](/debianConfig/configurationFiles/etc/bind/named.conf.local.md)
 
-/etc/bind/named.conf.options
+/etc/bind/named.conf.local

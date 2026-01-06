@@ -1,6 +1,6 @@
 This file defines **global DNS server behaviour**.
 
-```powershell title="default dhcpd.conf conf"
+```powershell title="default named.conf.options conf"
 options {
 	directory "/var/cache/bind";
 };

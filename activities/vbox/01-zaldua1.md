@@ -452,23 +452,38 @@ apt install bind9 bind9-dnsutils
 ```
 
 ```powershell title="zaldua1zerb1 - /etc/bind/named.conf.options"
-   recursion yes;
+options {
+	directory "/var/cache/bind";
 
-   allow-query {any; };
+	listen-on { any; };
+	listen-on-v6 { none; };
 
-   forwarders {
-      172.18.0.2;
-      8.8.8.8;
-   };
+	recursion yes;
 
-   forward only;
-   dnssec-validation no;
-   listen-on-v6 { any; };
+	allow-recursion {
+		localhost;
+		192.168.42.0/23;
+		192.168.44.0/23;
+	};
+
+	allow-query { any; };
+
+	forwarders {
+		8.8.8.8;
+		1.1.1.1;
+	};
+
+	dnssec-validation auto;
+};
 ```
 
 ```powershell title="zaldua2zerb1 - installation"
 apt update
 apt install bind9 bind9-dnsutils
+```
+
+```powerhsell title="zaldua1zerb1 - /etc/bind/named.conf.local"
+
 ```
 ## Template
 
