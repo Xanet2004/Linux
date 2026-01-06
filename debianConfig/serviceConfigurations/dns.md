@@ -9,6 +9,11 @@ DNS Translates domain names into IP addresses so devices can locate each other o
 - [/etc/bind/named.conf.options](/debianConfig/configurationFiles/etc/bind/named.conf.options.md) – This file defines **global DNS server behaviour**.
 - [/etc/bind/named.conf.local](/debianConfig/configurationFiles/etc/bind/named.conf.local.md) – This file is used to define **local DNS zones**.
 
+> **Important**
+> After configuring a DNS server, **you might need to set the DNS server as localhost**
+> So change:
+> 	[/etc/dhcpd.conf](dhcpcd.conf.md) if this is also a DHCP server
+> 	[/etc/resolv.conf](/debianConfig/configurationFiles/etc/resolv.conf.md) if this is NOT connected to a DHCP server.
 # Installation
 
 ```powershell title="installation"
@@ -25,6 +30,18 @@ apt install bind9 bind9-dnsutils
 - **zalduabi (192.168.44.0/23)**  
     → `44.168.192.in-addr.arpa`  
     → `45.168.192.in-addr.arpa`
+
+```powershell title="/etc/resolv.conf"
+# If you don't have any dhcp server change this file
+nameserver localhost # Master dns server
+nameserver 8.8.8.8 # Secondary just in case
+```
+
+```powershell title="/etc/dhcp/dhcpd.conf"
+# If you already have a dhcp server, you will need to configure the DNS on /etc/dhcp/dhcpd.conf
+option domain-name "zaldua.eus";
+option domain-name-servers serv1.zalduabat.eus, serv1.zalduabi.eus;
+```
 
 ```powershell title="/etc/bind/named.conf.options"
 options {

@@ -31,12 +31,54 @@
               "type": "markdown",
               "state": {
                 "file": "debianConfig/debianConfig.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "pinned": true,
               "icon": "lucide-file",
               "title": "debianConfig"
+            }
+          },
+          {
+            "id": "2cde301da47d68e2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "debianConfig/serviceConfigurations/dns.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "dns"
+            }
+          },
+          {
+            "id": "35054cb14e8d3587",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "debianConfig/configurationFiles/etc/resolv.conf.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "resolv.conf"
+            }
+          },
+          {
+            "id": "76aa31bbd7547a12",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "debianConfig/configurationFiles/etc/dhcpcd.conf.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "dhcpcd.conf"
             }
           },
           {
@@ -53,20 +95,6 @@
               "pinned": true,
               "icon": "lucide-file",
               "title": "01-zaldua1"
-            }
-          },
-          {
-            "id": "ebf3a5be23c5154e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "debianConfig/serviceConfigurations/dhcp/views.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "views"
             }
           }
         ],
@@ -249,12 +277,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "ebf3a5be23c5154e",
+  "active": "35054cb14e8d3587",
   "lastOpenFiles": [
-    "debianConfig/debianConfig.md",
-    "debianConfig/serviceConfigurations/dhcp/views.md",
+    "debianConfig/configurationFiles/etc/dhcpcd.conf.md",
+    "debianConfig/configurationFiles/etc/resolv.conf.md",
     "debianConfig/serviceConfigurations/dns.md",
+    "debianConfig/debianConfig.md",
+    "Linux.md",
     "activities/vbox/01-zaldua1.md",
+    "debianConfig/serviceConfigurations/dhcp/basicSlave.md",
+    "debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md",
+    "debianConfig/serviceConfigurations/dhcp.md",
+    "debianConfig/serviceConfigurations/ldap.md",
+    "debianConfig/serviceConfigurations/dhcp/views.md",
     "debianConfig/configurationFiles/etc/bind/db.reversedIp.md",
     "debianConfig/configurationFiles/etc/bind/exampleDomainName.db.md",
     "debianConfig/configurationFiles/etc/bind/named.conf.local.md",
@@ -262,11 +297,7 @@
     "debianConfig/serviceConfigurations/dns/basicMaster.md",
     "debianConfig/serviceConfigurations/dhcp/basicPrimary.md",
     "debianConfig/serviceConfigurations/dhcp/testCommands.md",
-    "debianConfig/serviceConfigurations/dhcp/basicSlave.md",
-    "Linux.md",
     "debianConfig/serviceConfigurations/dns",
-    "debianConfig/serviceConfigurations/dhcp.md",
-    "debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md",
     "debianConfig/configurationFiles/etc/bind",
     "debianConfig/serviceConfigurations/dhcp/basicSecondary.md",
     "activities/vbox/02-archLinux.md",
@@ -279,10 +310,7 @@
     "debianConfig/configurationFiles/etc/default",
     "vbox/vboxManage/modifyvm.md",
     "vbox/vbox.md",
-    "README.md",
-    "Linux copy.md",
     "Linux",
-    "vbox/vboxManage/storagectl.md",
     "debianConfig/serviceConfigurations/dhcp",
     "garitanoJauntxikGorena.png",
     "debianConfig/configurationFiles/etc/network",

@@ -15,6 +15,33 @@ chmod 750 /var/cache/bind
 > Important
 > We are creating this file for the secondary server to copy the zones from the primary
 
+> Important
+> To update any change in the zones, increment SOA and use:
+```powershell title="reload slave zones"
+# Master
+named-checkconf
+named-checkzone zalduabat.eus /etc/bind/zalduabat.db
+named-checkzone zalduabat.eus /etc/bind/zalduabi.db
+named-checkzone 42.168.192.in-addr.arpa /etc/bind/db.192.168.43
+named-checkzone 43.168.192.in-addr.arpa /etc/bind/db.192.168.43
+named-checkzone 44.168.192.in-addr.arpa /etc/bind/db.192.168.44
+named-checkzone 45.168.192.in-addr.arpa /etc/bind/db.192.168.44
+rndc reload
+
+# Slave
+rndc retransfer zalduabat.eus
+rndc retransfer zalduabi.eus
+rndc retransfer 42.168.192.in-addr.arpa
+rndc retransfer 43.168.192.in-addr.arpa
+rndc retransfer 44.168.192.in-addr.arpa
+rndc retransfer 45.168.192.in-addr.arpa
+
+# Test
+dig @127.0.0.1 zalduabat.eus SOA
+```
+> If any client is not responding, you might need to check your defined DNS for the server.
+`
+
 ```powershell title="slave - /etc/bind/named.conf.options"
 options {
 	directory "/var/cache/bind";

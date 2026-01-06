@@ -5,7 +5,7 @@ DHCP Automatically assigns IP addresses and network settings to devices on a net
 
 # File index
 - [/etc/default/isc-dhcp-server](/debianConfig/configurationFiles/etc/default/isc-dhcp-server.md) – Specifies interfaces to serve
-- [/etc/dhcp/dhcpd.conf](dhcpd.conf.md) – Main DHCP configuration file
+- [/etc/dhcp/dhcpd.conf](dhcpcd.conf.md) – Main DHCP configuration file
 
 # Installation
 

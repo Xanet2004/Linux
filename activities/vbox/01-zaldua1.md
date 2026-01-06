@@ -691,7 +691,40 @@ zone "45.168.192.in-addr.arpa" {
     masters { 192.168.44.4; };
 };
 ```
+
+## LDAP
+
+```powershell title="zaldua1zerb1 - template"
+
+```
+
+## WWW
+
+```powershell title="zaldua1zerb1 - template"
+```
+
+## Docker
+
+```powershell title="zaldua1zerb1 - template"
+```
+
+## SMB
+
+```powershell title="zaldua1zerb1 - template"
+```
+
+## Backups (Segurtasun kopiak)
+
+```powershell title="zaldua1zerb1 - template"
+```
+
+## Task automatisations (Ataza automatizazioa)
+
+```powershell title="zaldua1zerb1 - template"
+```
+
 ## Template
 
 ```powershell title="zaldua1zerb1 - template"
 ```
+
