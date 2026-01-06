@@ -334,7 +334,7 @@ apt-get install isc-dhcp-server
 ```
 
 ```powershell title="zaldua1zerb1 - /etc/default/isc-dhcp-server"
-INTERFACESv4="enp0s18"  # This will be the interface that DHCP will look
+INTERFACESv4="enp0s18 enp0s19"  # This will be the interface that DHCP will look
 INTERFACESv6=""
 ```
 
@@ -347,7 +347,7 @@ max-lease-time 7200;
 
 failover peer "dhcp-failover" {
     primary;                    # this is the primary
-    address 192.168.42.4;       # primary server IP
+    address 192.168.44.4;       # primary server IP
     port 647;                   # default failover port
     peer address 192.168.44.5;  # secondary server IP
     peer port 647;
@@ -357,20 +357,32 @@ failover peer "dhcp-failover" {
     split 128;                  # how to split IP pool (128 = 50/50)
 }
 
-# Subnet 1: 192.168.42.0/23
+# subnet 1
 subnet 192.168.42.0 netmask 255.255.254.0 {
+  pool {
     range 192.168.42.100 192.168.42.200;
-    option routers 192.168.42.2;
-    option broadcast-address 192.168.43.255;
     failover peer "dhcp-failover";
+  }
+  option domain-name-servers 192.168.42.4, 192.168.44.5;
+  option domain-name "zalduabat.eus";
+  option routers 192.168.42.2;
+  option broadcast-address 192.168.43.255;
+  default-lease-time 60;
+  max-lease-time 720;
 }
 
-# Subnet 2: 192.168.44.0/23
+# subnet 2
 subnet 192.168.44.0 netmask 255.255.254.0 {
+  pool {
     range 192.168.44.100 192.168.44.200;
-    option routers 192.168.44.2;
-    option broadcast-address 192.168.45.255;
     failover peer "dhcp-failover";
+  }
+  option domain-name-servers 192.168.42.4, 192.168.44.5;
+  option domain-name "zalduabat.eus";
+  option routers 192.168.44.2;
+  option broadcast-address 192.168.45.255;
+  default-lease-time 60;
+  max-lease-time 720;
 }
 ```
 
@@ -391,6 +403,8 @@ option domain-name-servers 192.168.42.2, 192.168.44.4;
 default-lease-time 600;
 max-lease-time 7200;
 
+#authoritative; # IMPORTANT TO COMMENT THIS ON THE SECONDARY SERVER
+
 failover peer "dhcp-failover" {
     secondary;                  # this is now the secondary
     address 192.168.44.5;       # secondary server IP
@@ -399,30 +413,62 @@ failover peer "dhcp-failover" {
     peer port 647;
     max-response-delay 60;
     max-unacked-updates 10;
-    split 128;                  # same split as primary
 }
 
-# Subnet 1: 192.168.42.0/23
-subnet 192.168.42.0 netmask 255.255.254.0 {
-    range 192.168.42.100 192.168.42.200;
-    option routers 192.168.42.2;
-    option broadcast-address 192.168.43.255;
-    failover peer "dhcp-failover";
-}
-
-# Subnet 2: 192.168.44.0/23
+# subnet 2
 subnet 192.168.44.0 netmask 255.255.254.0 {
-    range 192.168.44.100 192.168.44.200;
+    pool {
+      range 192.168.44.100 192.168.44.200;
+      failover peer "dhcp-failover";
+    }
+    option domain-name-servers 192.168.42.4, 192.168.44.5;
+    option domain-name "zalduabat.eus";
     option routers 192.168.44.2;
     option broadcast-address 192.168.45.255;
-    failover peer "dhcp-failover";
+    default-lease-time 60;
+    max-lease-time 720;
+}
+
+# subnet 1
+subnet 192.168.42.0 netmask 255.255.254.0 {
+    pool {
+      range 192.168.42.100 192.168.42.200;
+      failover peer "dhcp-failover";
+    }
+    option domain-name-servers 192.168.42.4, 192.168.44.5;
+    option domain-name "zalduabat.eus";
+    option routers 192.168.42.2;
+    option broadcast-address 192.168.43.255;
+    default-lease-time 60;
+    max-lease-time 720;
 }
 ```
 
 ## DNS
 
-```powershell title="zaldua1zerb1 - dns"
+```powershell title="zaldua1zerb1 - installation"
+apt update
+apt install bind9 bind9-dnsutils
+```
 
+```powershell title="zaldua1zerb1 - /etc/bind/named.conf.options"
+   recursion yes;
+
+   allow-query {any; };
+
+   forwarders {
+      172.18.0.2;
+      8.8.8.8;
+   };
+
+   forward only;
+   dnssec-validation no;
+   listen-on-v6 { any; };
+```
+
+```powershell title="zaldua2zerb1 - installation"
+apt update
+apt install bind9 bind9-dnsutils
 ```
 ## Template
 

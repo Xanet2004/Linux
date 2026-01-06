@@ -1,3 +1,5 @@
+This file defines **global DHCP server behaviour**.
+
 ```powershell title="default dhcpd.conf conf"
 # dhcpd.conf
 #
@@ -143,6 +145,7 @@ authoritative;
 - **Important!**
 - Tells clients: “I am the **official DHCP server** for this network.”
 - If a client has an IP from a previous lease (or a rogue server), an authoritative DHCP server will send a **DHCPNAK** to force the client to request a correct IP.
+- If we are configuring more than one DHCP servers with failover, we MUST configure the primary one with authoritative; and the other WITHOUT. (Having both of the with authoritative will cause errors and clients won't use their correct IP)
 
 ---
 

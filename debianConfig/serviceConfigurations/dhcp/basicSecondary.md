@@ -15,6 +15,8 @@ INTERFACESv6=""
 option domain-name "zaldua.eus";
 option domain-name-servers 192.168.42.2, 192.168.44.4;
 
+#authoritative; # IMPORTANT TO COMMENT THIS ON THE SECONDARY SERVER
+
 default-lease-time 600;
 max-lease-time 7200;
 

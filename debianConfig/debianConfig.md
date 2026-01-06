@@ -20,4 +20,8 @@ In the other hand, configuration files will gather and explain all configuration
 	- /default
 		- /[isc-dhcp-server](/debianConfig/configurationFiles/etc/default/isc-dhcp-server.md)
 	- /dhcp
-		- /[dhcpd.conf](dhcpd.conf.md)
+		- /[dhcpd.conf](/debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md)
+	- /bind
+		- /[named.conf.options](/debianConfig/configurationFiles/etc/bind/named.conf.options.md)
+
+/etc/bind/named.conf.options
