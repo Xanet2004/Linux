@@ -24,7 +24,7 @@ INTERFACESv6=""
 # option domain-name "zalduabat.eus";
 # option domain-name-servers 192.168.42.2, 192.168.44.4;
 
-authoritative;
+authoritative;  # IMPORTANT TO USE THIS ONLY ON THE PRIMARY SERVER
 
 # Subnet 1: 192.168.42.0/23
 subnet 192.168.42.0 netmask 255.255.254.0 {

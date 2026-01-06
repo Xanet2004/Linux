@@ -50,6 +50,12 @@ Example (reverse zone):
 zone "44.168.192.in-addr.arpa"
 ```
 
+> Important
+> If the network is for example /23, we have to define various reversed zones.
+> 192.168.42.0/23
+>    - 42.168.192.in-addr.arpa
+>    - 43.168.192.in-addr.arpa
+
 ---
 
 ## `type` — Zone role

@@ -24,5 +24,5 @@ In the other hand, configuration files will gather and explain all configuration
 	- /bind
 		- /[named.conf.options](/debianConfig/configurationFiles/etc/bind/named.conf.options.md)
 		- /[named.conf.local](/debianConfig/configurationFiles/etc/bind/named.conf.local.md)
-
-/etc/bind/named.conf.local
+		- /[exampleDomainName.db](/debianConfig/configurationFiles/etc/bind/exampleDomainName.db.md) - E.g. /zalduabat.db
+		- /[db.reversedIp](/debianConfig/configurationFiles/etc/bind/db.reversedIp.md) - E.g. /db.192.168.42
