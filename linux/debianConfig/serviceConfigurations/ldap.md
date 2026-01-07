@@ -72,3 +72,17 @@ ldapdelete -x -D "cn=admin,dc=zalduabat,dc=eus" -W "ou=People,dc=zalduabat,dc=eu
 
 # Or we can create a new file "/root/ldap/remove_content.ldif" and define there the entities
 ```
+
+# Client configuration
+
+```powershell title="client - installing ldap"
+apt install libnss-ldapd libpam-ldapd ldap-utils
+> ldap://ldap.zalduabat.eus
+> dc=zalduabat,dc=eus
+> passwd, group, shadow
+```
+
+```powershell title="client - /etc/pam.d/common-session"
+...
+session required pam_mkhomedir.so umask=0022 skel=/etc/skel
+```
