@@ -1,7 +1,7 @@
 Service to handle users and domains.
 
 # File index
-- [/etc/example](/debianConfig/configurationFiles/etc/example.md) - Example
+- [/etc/example](/linux/debianConfig/configurationFiles/etc/example.md) - Example
 
 # Installation
 

@@ -11,10 +11,10 @@ The documentation is divided into two types of notes:
 # Index - Service configurations
 -  [networkInterfaces](/linux/debianConfig/serviceConfigurations/networkInterfaces.md) (networking)
 - [openssh](/linux/debianConfig/serviceConfigurations/openssh.md)
-- [dhcp](/linux/debianConfig/serviceConfigurationsdhcp.md)
-- [dns](/linux/debianConfig/serviceConfigurationsdns.md)
-- [routing](/linux/debianConfig/serviceConfigurationsrouting.md)
-- [ldap](/linux/debianConfig/serviceConfigurationsldap.md)
+- [dhcp](/linux/debianConfig/serviceConfigurations/dhcp.md)
+- [dns](/linux/debianConfig/serviceConfigurations/dns.md)
+- [routing](/linux/debianConfig/serviceConfigurations/routing.md)
+- [ldap](/linux/debianConfig/serviceConfigurations/ldap.md)
 - [www](/linux/debianConfig/serviceConfigurations/www.md)
 - [docker](/linux/debianConfig/serviceConfigurations/docker.md)
 - [smb](/linux/debianConfig/serviceConfigurations/smb.md)
@@ -27,7 +27,7 @@ The documentation is divided into two types of notes:
 	- /[dhcpcd.conf](/linux/debianConfig/configurationFiles/etc/dhcpcd.conf.md) - Change DNS on this file after configuring a DNS server IF **this is a DHCP server**.
 	- /[resolv.conf](/linux/debianConfig/configurationFiles/etc/resolv.conf.md) - Change DNS on this file after configuring a DNS server IF **this is *NOT* a DHCP server** (it will be automatically changed by [dhcpd.conf])
 	- /network
-		- /[interfaces](/linux/debianConfig/configurationFiles/etc/interfaces.md)
+		- /[interfaces](/linux/debianConfig/configurationFiles/etc/network/interfaces.md)
 	- /[hostname](/linux/debianConfig/configurationFiles/etc/hostname.md)
 `dhcp`
 	- /default
