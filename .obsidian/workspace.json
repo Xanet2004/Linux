@@ -15,7 +15,7 @@
               "type": "markdown",
               "state": {
                 "file": "linux/linux.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "pinned": true,
@@ -24,21 +24,55 @@
             }
           },
           {
-            "id": "5ed39cd5a084e829",
+            "id": "9b659480a5468693",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/activities/activities.md",
+                "file": "linux/debianConfig/debianConfig.md",
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "activities"
+              "title": "debianConfig"
+            }
+          },
+          {
+            "id": "7fa9874345bab51a",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/activities/vbox/01-zaldua1.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "01-zaldua1"
+            }
+          },
+          {
+            "id": "de13d42839d9d41b",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/debianConfig/serviceConfigurations/ldap.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "ldap"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -217,34 +251,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "5ed39cd5a084e829",
+  "active": "7fa9874345bab51a",
   "lastOpenFiles": [
-    "linux/linux.md",
     "linux/debianConfig/debianConfig.md",
-    "linux/debianConfig/serviceConfigurations/openssh.md",
+    "linux/activities/vbox/01-zaldua1.md",
+    "linux/debianConfig/serviceConfigurations/ldap.md",
+    "linux/debianConfig/configurationFiles/root/ldap/add_content.ldif.md",
+    "linux/debianConfig/configurationFiles/root/ldap",
+    "linux/debianConfig/configurationFiles/root",
+    "linux/debianConfig/configurationFiles/etc/interfaces.md",
+    "linux/linux.md",
+    "linux/debianConfig/serviceConfigurations/dns/basicSlave.md",
+    "linux/debianConfig/serviceConfigurations/dns.md",
+    "linux/debianConfig/serviceConfigurations/dns/testCommands.md",
+    "linux/debianConfig/serviceConfigurations/dhcp/basicSecondary.md",
+    "linux/debianConfig/serviceConfigurations/dhcp.md",
+    "linux/debianConfig/serviceConfigurations/dhcp/basicPrimary.md",
+    "linux/activities/activities.md",
     "linux/debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md",
+    "linux/debianConfig/serviceConfigurations/openssh.md",
     "linux/debianConfig/configurationFiles/etc/default/isc-dhcp-server.md",
     "linux/debianConfig/configurationFiles/etc/hostname.md",
     "linux/debianConfig/configurationFiles/etc/network/interfaces.md",
-    "linux/debianConfig/configurationFiles/etc/interfaces.md",
     "linux/debianConfig/configurationFiles/etc/dhcpcd.conf.md",
     "linux/debianConfig/serviceConfigurations/www.md",
-    "linux/debianConfig/serviceConfigurations/ldap.md",
     "linux/debianConfig/serviceConfigurations/routing.md",
-    "linux/debianConfig/serviceConfigurations/dns.md",
     "linux/debianConfig/configurationFiles/etc/bind/named.conf.options.md",
     "linux/debianConfig/serviceConfigurations/dns/views.md",
-    "linux/debianConfig/serviceConfigurations/dns/testCommands.md",
     "().md",
-    "linux/debianConfig/serviceConfigurations/dns/basicSlave.md",
     "linux/debianConfig/serviceConfigurations/dns/basicMaster.md",
-    "linux/debianConfig/serviceConfigurations/dhcp.md",
-    "linux/debianConfig/serviceConfigurations/dhcp/basicPrimary.md",
     "linux/debianConfig/serviceConfigurationsdhcp.md",
-    "linux/debianConfig/serviceConfigurations/networkInterfaces.md",
-    "linux/debianConfig/serviceConfigurationsopenssh.md",
-    "linux/vbox/vbox.md",
-    "linux/installation/installation.md",
     "windows",
     "linux",
     "Untitled.base",
@@ -253,8 +289,6 @@
     "WhatsApp Sticker 2026-01-03 at 22.55.17",
     "linux/debianConfig/configurationFiles/etc/dhcp",
     "linux/debianConfig/configurationFiles/etc/default",
-    "Linux",
-    "linux/debianConfig/serviceConfigurations/dhcp",
     "garitanoJauntxikGorena.png",
     "Untitled.canvas"
   ]

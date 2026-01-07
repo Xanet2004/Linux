@@ -21,11 +21,11 @@ chmod 750 /var/cache/bind
 # Master
 named-checkconf
 named-checkzone zalduabat.eus /etc/bind/zalduabat.db
-named-checkzone zalduabat.eus /etc/bind/zalduabi.db
-named-checkzone 42.168.192.in-addr.arpa /etc/bind/db.192.168.43
+named-checkzone zalduabi.eus /etc/bind/zalduabi.db
+named-checkzone 42.168.192.in-addr.arpa /etc/bind/db.192.168.42
 named-checkzone 43.168.192.in-addr.arpa /etc/bind/db.192.168.43
 named-checkzone 44.168.192.in-addr.arpa /etc/bind/db.192.168.44
-named-checkzone 45.168.192.in-addr.arpa /etc/bind/db.192.168.44
+named-checkzone 45.168.192.in-addr.arpa /etc/bind/db.192.168.45
 rndc reload
 
 # Slave

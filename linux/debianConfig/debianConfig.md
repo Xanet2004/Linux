@@ -4,7 +4,6 @@ The documentation is divided into two types of notes:
 
 - **Service configurations** (SSH, DHCP, DNS, etc.):  
     These notes explain the steps and required settings needed to properly install and configure each service so that it works correctly.
-    
 - **Configuration files**:  
     These notes collect and explain the available options and directives found in configuration files, describing what each option does and how it affects the system.
 

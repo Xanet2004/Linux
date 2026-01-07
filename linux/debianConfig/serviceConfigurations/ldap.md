@@ -1,7 +1,7 @@
 Service to handle users and domains.
 
 # File index
-- [/etc/example](/linux/debianConfig/configurationFiles/etc/example.md) - Example
+- [/root/ldap/add_content.ldif](/linux/debianConfig/configurationFiles/root/ldap/add_content.ldif.md) - Example
 
 # Installation
 
@@ -27,31 +27,48 @@ slapcat # see domain users / entities
 ```
 
 ```powershell title="add user"
-nano add_content.ldif
+mkdir /root/ldap/
+nano /root/ldap/add_content.ldif
 ```
 
-```powershell title="server - add_content.ldif - adding user Alice"
-dn: uid=alice,ou=People,dc=garitano,dc=eus
+```powershell title="server - /root/ldap/add_content.ldif"
+# Add People OU
+dn: ou=People,dc=zalduabat,dc=eus
+objectClass: organizationalUnit
+ou: People
+
+# Add Xanet user
+dn: uid=xzaldua,ou=People,dc=zalduabat,dc=eus
 objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
-uid: alice
-givenName: Alice
-cn: Alice
-Sn: Surname
-displayName: Alice
+uid: xzaldua
+cn: Xanet Zaldua
+sn: Zaldua
+givenName: Xanet
+displayName: Xanet Zaldua
 uidNumber: 10000
 gidNumber: 5000
-userPassword: alice
-gecos: Alice
+homeDirectory: /home/xzaldua
 loginShell: /bin/bash
-homeDirectory: /home/alice
+userPassword: xzaldua
+gecos: Xanet Zaldua
 ```
 
 ```powershell title="server - generate user"
-ldapadd -x -D cn=admin,dc=garitano,dc=eus -W -f add_content.ldif
+ldapadd -x -D cn=admin,dc=zalduabat,dc=eus -W -f /root/ldap/add_content.ldif
+# cn = creators name
 ```
 
 ```powershell title="server - see domain entities"
 slapcat
+```
+
+# Delete user and OUs
+
+```powershell
+ldapdelete -x -D "cn=admin,dc=zalduabat,dc=eus" -W "uid=xzaldua,ou=People,dc=zalduabat,dc=eus"
+ldapdelete -x -D "cn=admin,dc=zalduabat,dc=eus" -W "ou=People,dc=zalduabat,dc=eus"
+
+# Or we can create a new file "/root/ldap/remove_content.ldif" and define there the entities
 ```

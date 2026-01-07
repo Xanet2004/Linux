@@ -31,7 +31,7 @@ authoritative;  # IMPORTANT TO USE THIS ONLY ON THE PRIMARY SERVER
 subnet 192.168.42.0 netmask 255.255.254.0 {
     range 192.168.42.100 192.168.42.200;
     option domain-name-servers 192.168.42.4, 192.168.44.5;
-    option domain-name "zalduabat.eus";
+    option domain-name "zalduabat.eus"; # Not zalduabi.eus because it doesn't have any logic
     option routers 192.168.42.2;
     option broadcast-address 192.168.43.255;
     default-lease-time 60;
@@ -42,7 +42,7 @@ subnet 192.168.42.0 netmask 255.255.254.0 {
 subnet 192.168.44.0 netmask 255.255.254.0 {
     range 192.168.44.100 192.168.44.200;
 	option domain-name-servers 192.168.42.4, 192.168.44.5;
-    option domain-name "zalduabat.eus";
+    option domain-name "zalduabat.eus"; # Not zalduabi.eus because it doesn't have any logic
     option routers 192.168.44.2;
     option broadcast-address 192.168.45.255;
 	default-lease-time 60;

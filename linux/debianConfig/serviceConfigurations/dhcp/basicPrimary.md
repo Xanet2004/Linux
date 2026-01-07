@@ -12,7 +12,7 @@ INTERFACESv6=""
 ```
 
 ```powershell title="/etc/dhcp/dhcpd.conf"
-option domain-name "zaldua.eus";
+option domain-name "zalduabat.eus";
 option domain-name-servers 192.168.42.2, 192.168.44.4;
 
 authoritative; # IMPORTANT TO USE THIS ONLY ON THE PRIMARY SERVER

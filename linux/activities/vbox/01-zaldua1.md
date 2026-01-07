@@ -21,6 +21,7 @@ zaldua1zerb1
 		- Or that was the intention but god knows what's the password to the root user so we are creating our own disk and installing the machine.
 	- Partitions: (I won't look much this part for now)
 		- primary / y logical swap
+- ldap
 
 zaldua2zerb1
 - addr0: auto (nat)
@@ -50,6 +51,7 @@ zaldua1bez1
 		- 20GB HDD disk
 	- Partitions: (I won't look much this part for now)
 		- primary / y logical swap
+- client1.zalduabat.eus
 
 zaldua2bez1
 - addr0: auto (nat)
@@ -65,6 +67,7 @@ zaldua2bez1
 		- 20GB HDD disk
 	- Partitions: (I won't look much this part for now)
 		- primary / y logical swap
+- client2.zalduabat.eus -> Not zalduabi.eus because its not useful for LDAP
 # Network info
 
 Masc: /23 -> 8 + 8 + 7 + 0
@@ -339,7 +342,7 @@ INTERFACESv6=""
 ```
 
 ```powershell title="zaldua1zerb1 - /etc/dhcp/dhcpd.conf"
-option domain-name "zaldua.eus";
+option domain-name "zalduabat.eus"; # Default domain
 option domain-name-servers 192.168.42.2, 192.168.44.4;
 
 default-lease-time 600;
@@ -364,7 +367,7 @@ subnet 192.168.42.0 netmask 255.255.254.0 {
     failover peer "dhcp-failover";
   }
   option domain-name-servers 192.168.42.4, 192.168.44.5;
-  option domain-name "zalduabat.eus";
+  option domain-name "zalduabat.eus"; # Not zalduabi.eus because it doesn't have any logic
   option routers 192.168.42.2;
   option broadcast-address 192.168.43.255;
   default-lease-time 60;
@@ -378,7 +381,7 @@ subnet 192.168.44.0 netmask 255.255.254.0 {
     failover peer "dhcp-failover";
   }
   option domain-name-servers 192.168.42.4, 192.168.44.5;
-  option domain-name "zalduabat.eus";
+  option domain-name "zalduabat.eus"; # Not zalduabi.eus because it doesn't have any logic
   option routers 192.168.44.2;
   option broadcast-address 192.168.45.255;
   default-lease-time 60;
@@ -407,7 +410,7 @@ INTERFACESv6=""
 ```
 
 ```powershell title="zaldua2zerb1 - /etc/dhcp/dhcpd.conf"
-option domain-name "zaldua.eus";
+option domain-name "zalduabat.eus"; # Default domain
 option domain-name-servers 192.168.42.2, 192.168.44.4;
 
 default-lease-time 600;
@@ -432,7 +435,7 @@ subnet 192.168.44.0 netmask 255.255.254.0 {
       failover peer "dhcp-failover";
     }
     option domain-name-servers 192.168.42.4, 192.168.44.5;
-    option domain-name "zalduabat.eus";
+    option domain-name "zalduabat.eus"; # Not zalduabi.eus because it doesn't have any logic
     option routers 192.168.44.2;
     option broadcast-address 192.168.45.255;
     default-lease-time 60;
@@ -446,7 +449,7 @@ subnet 192.168.42.0 netmask 255.255.254.0 {
       failover peer "dhcp-failover";
     }
     option domain-name-servers 192.168.42.4, 192.168.44.5;
-    option domain-name "zalduabat.eus";
+    option domain-name "zalduabat.eus"; # Not zalduabi.eus because it doesn't have any logic
     option routers 192.168.42.2;
     option broadcast-address 192.168.43.255;
     default-lease-time 60;
@@ -560,7 +563,9 @@ $TTL 86400
 @       IN  NS  serv1.zalduabat.eus.
 
 serv1   IN  A   192.168.42.4
+serv2   IN  A   192.168.44.5 ; Not useful for LDAP so we are moving zalduabi clients to zalduabat
 client1 IN  A   192.168.42.10
+client2 IN  A   192.168.44.10 ; Not useful for LDAP so we are moving zalduabi clients to zalduabat
 ```
 ```powershell title="zaldua1zerb1 - /etc/bind/zalduabi.db"
 $TTL 86400
@@ -574,8 +579,8 @@ $TTL 86400
 @       IN  NS  serv1.zalduabi.eus.
 
 serv1   IN  A   192.168.44.4
-serv2   IN  A   192.168.44.5
-client2 IN  A   192.168.44.10
+;serv2   IN  A   192.168.44.5 ; Not useful for LDAP so we are moving zalduabi clients to zalduabat
+;client2 IN  A   192.168.44.10 ; Not useful for LDAP so we are moving zalduabi clients to zalduabat
 ```
 
 ```powershell title="zaldua1zerb1 - /etc/bind/db.192.168.42"
@@ -616,8 +621,8 @@ $TTL 86400
 @   IN  NS  serv1.zalduabi.eus.
 
 4   IN  PTR serv1.zalduabi.eus.
-5   IN  PTR serv2.zalduabi.eus.
-10 IN  PTR client2.zalduabi.eus.
+5   IN  PTR serv2.zalduabat.eus. ; Not useful for LDAP so we are moving zalduabi clients to zalduabat
+10 IN  PTR client2.zalduabat.eus. ; Not useful for LDAP so we are moving zalduabi clients to zalduabat
 ```
 ```powershell title="zaldua1zerb1 - /etc/bind/db.192.168.45"
 $TTL 86400

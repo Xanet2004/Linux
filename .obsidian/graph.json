@@ -11,27 +11,27 @@
       "query": "path:linux  ",
       "color": {
         "a": 1,
-        "rgb": 14606418
+        "rgb": 14732626
       }
     },
     {
       "query": "path:windows  ",
       "color": {
         "a": 1,
-        "rgb": 14704722
+        "rgb": 14701138
       }
     }
   ],
   "collapse-display": false,
   "showArrow": true,
   "textFadeMultiplier": 0.1,
-  "nodeSizeMultiplier": 1.42472046150559,
-  "lineSizeMultiplier": 1.73740474325191,
+  "nodeSizeMultiplier": 0.799351898012962,
+  "lineSizeMultiplier": 1.58106260237875,
   "collapse-forces": false,
-  "centerStrength": 0.712484865750303,
-  "repelStrength": 17.0757068584859,
-  "linkStrength": 0.958621180827576,
-  "linkDistance": 30,
-  "scale": 0.4278756691111621,
+  "centerStrength": 0.43444199131116,
+  "repelStrength": 12.4264653514707,
+  "linkStrength": 1,
+  "linkDistance": 91,
+  "scale": 0.4014537097319592,
   "close": false
 }
