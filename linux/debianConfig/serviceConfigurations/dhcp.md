@@ -1,12 +1,12 @@
 DHCP Automatically assigns IP addresses and network settings to devices on a network.
 # Index
-- [Primary](/debianConfig/serviceConfigurations/dhcp/basicPrimary.md)
-- [Secondary](/debianConfig/serviceConfigurations/dhcp/basicSecondary.md)
+- [Primary](basicPrimary.md)
+- [Secondary](basicSecondary.md)
 
 # File index
-- [/etc/default/isc-dhcp-server](/debianConfig/configurationFiles/etc/default/isc-dhcp-server.md) – Specifies interfaces to serve
-- [/etc/dhcp/dhcpd.conf](/debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md) – Main DHCP configuration file
-- [/etc/dhcpcd.conf](/debianConfig/configurationFiles/etc/dhcpcd.conf.md) - Change DNS on this file after configuring a DNS server IF **this is a DHCP server**.
+- [/etc/default/isc-dhcp-server](isc-dhcp-server.md) – Specifies interfaces to serve
+- [/etc/dhcp/dhcpd.conf](dhcpd.conf.md) – Main DHCP configuration file
+- [/etc/dhcpcd.conf](dhcpcd.conf.md) - Change DNS on this file after configuring a DNS server IF **this is a DHCP server**.
 
 # Installation
 

@@ -14,13 +14,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux.md",
-                "mode": "preview",
+                "file": "linux/linux.md",
+                "mode": "source",
                 "source": false
               },
               "pinned": true,
               "icon": "lucide-file",
-              "title": "Linux"
+              "title": "linux"
             }
           },
           {
@@ -30,7 +30,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "debianConfig/debianConfig.md",
+                "file": "linux/debianConfig/debianConfig.md",
                 "mode": "source",
                 "source": false
               },
@@ -38,9 +38,37 @@
               "icon": "lucide-file",
               "title": "debianConfig"
             }
+          },
+          {
+            "id": "886521703adbe4b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/activities/vbox/01-zaldua1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01-zaldua1"
+            }
+          },
+          {
+            "id": "a2bd17010cbb08b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/debianConfig/serviceConfigurations/ldap.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ldap"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -219,45 +247,45 @@
       "bases:Create new base": false
     }
   },
-  "active": "f9e3f20632f2e4db",
+  "active": "a2bd17010cbb08b4",
   "lastOpenFiles": [
-    "debianConfig/serviceConfigurations/routing.md",
-    "debianConfig/serviceConfigurations/dhcp.md",
-    "debianConfig/configurationFiles/etc/network/interfaces.md",
-    "debianConfig/debianConfig.md",
-    "debianConfig/configurationFiles/etc/dhcpcd.conf.md",
-    "debianConfig/configurationFiles/etc/resolv.conf.md",
-    "debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md",
-    "debianConfig/serviceConfigurations/dhcp/basicPrimary.md",
-    "activities/vbox/01-zaldua1.md",
+    "todo.md",
+    "linux/linux.md",
+    "linux/debianConfig/debianConfig.md",
+    "linux/activities/vbox/01-zaldua1.md",
+    "README.md",
+    "windows/windows.md",
+    "windows",
+    "linux/debianConfig/serviceConfigurations/networkInterfaces.md",
+    "linux/networkInterfaces.md",
+    "linux/ipAddresses/ipAddresses.md",
+    "linux",
+    "linux/debianConfig/serviceConfigurations/routing.md",
+    "linux/debianConfig/serviceConfigurations/dhcp.md",
+    "linux/debianConfig/configurationFiles/etc/network/interfaces.md",
+    "linux/debianConfig/configurationFiles/etc/dhcpcd.conf.md",
+    "linux/debianConfig/configurationFiles/etc/resolv.conf.md",
+    "linux/debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md",
+    "linux/debianConfig/serviceConfigurations/dhcp/basicPrimary.md",
     "Untitled.base",
-    "debianConfig/configurationFiles/etc/default/isc-dhcp-server.md",
-    "activities/activities.md",
-    "Linux.md",
-    "debianConfig/serviceConfigurations/dns.md",
-    "debianConfig/serviceConfigurations/dns/basicMaster.md",
-    "debianConfig/serviceConfigurations/dhcp/basicSlave.md",
-    "debianConfig/serviceConfigurations/ldap.md",
-    "debianConfig/serviceConfigurations/dhcp/views.md",
-    "debianConfig/configurationFiles/etc/bind/db.reversedIp.md",
-    "debianConfig/configurationFiles/etc/bind/exampleDomainName.db.md",
-    "debianConfig/configurationFiles/etc/bind/named.conf.local.md",
-    "debianConfig/configurationFiles/etc/bind/named.conf.options.md",
-    "debianConfig/serviceConfigurations/dhcp/testCommands.md",
-    "debianConfig/serviceConfigurations/dns",
-    "debianConfig/configurationFiles/etc/bind",
-    "debianConfig/serviceConfigurations/dhcp/basicSecondary.md",
-    "activities/vbox/02-archLinux.md",
-    "ipAddresses/ipAddresses.md",
+    "linux/debianConfig/configurationFiles/etc/default/isc-dhcp-server.md",
+    "linux/activities/activities.md",
+    "linux/debianConfig/serviceConfigurations/dns.md",
+    "linux/debianConfig/serviceConfigurations/dns/basicMaster.md",
+    "linux/debianConfig/serviceConfigurations/dhcp/basicSlave.md",
+    "linux/debianConfig/serviceConfigurations/ldap.md",
+    "linux/debianConfig/serviceConfigurations/dhcp/views.md",
+    "linux/debianConfig/configurationFiles/etc/bind/db.reversedIp.md",
+    "linux/debianConfig/configurationFiles/etc/bind/exampleDomainName.db.md",
+    "linux/debianConfig/configurationFiles/etc/bind/named.conf.local.md",
+    "linux/debianConfig/serviceConfigurations/dns",
+    "linux/debianConfig/configurationFiles/etc/bind",
     "WhatsApp Sticker 2026-01-03 at 22.55.17",
-    "debianConfig/configurationFiles/etc/dhcp",
-    "debianConfig/configurationFiles/etc/default",
-    "vbox/vboxManage/modifyvm.md",
+    "linux/debianConfig/configurationFiles/etc/dhcp",
+    "linux/debianConfig/configurationFiles/etc/default",
     "Linux",
-    "debianConfig/serviceConfigurations/dhcp",
+    "linux/debianConfig/serviceConfigurations/dhcp",
     "garitanoJauntxikGorena.png",
-    "debianConfig/configurationFiles/etc/network",
-    "debianConfig/configurationFiles/etc",
     "Untitled.canvas"
   ]
 }

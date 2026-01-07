@@ -2,7 +2,7 @@ Use a server as a router to connect different networks.
 
 # File index
 - [/etc/sysctl.conf](/debianConfig/configurationFiles/etc/sysctl.conf.md)
-- [/etc/network/interfaces](/debianConfig/configurationFiles/etc/network/interfaces.md)
+- [/etc/network/interfaces](interfaces.md)
 
 # Basic configuration example
 

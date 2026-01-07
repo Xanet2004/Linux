@@ -1,20 +1,20 @@
 DNS Translates domain names into IP addresses so devices can locate each other on the network.
 # Index
-- [Master](/debianConfig/serviceConfigurations/dns/basicMaster.md)
-- [Slave](/debianConfig/serviceConfigurations/dhcp/basicSlave.md)
+- [Master](basicMaster.md)
+- [Slave](basicSlave.md)
 - [DHCP assigns DNS to clients]()
-- [Views](/debianConfig/serviceConfigurations/dhcp/views.md)
-- [Test Commands](/debianConfig/serviceConfigurations/dhcp/testCommands.md)
+- [Views](views.md)
+- [Test Commands](testCommands.md)
 
 # File index
-- [/etc/bind/named.conf.options](/debianConfig/configurationFiles/etc/bind/named.conf.options.md) – This file defines **global DNS server behaviour**.
-- [/etc/bind/named.conf.local](/debianConfig/configurationFiles/etc/bind/named.conf.local.md) – This file is used to define **local DNS zones**.
+- [/etc/bind/named.conf.options](named.conf.options.md) – This file defines **global DNS server behaviour**.
+- [/etc/bind/named.conf.local](named.conf.local.md) – This file is used to define **local DNS zones**.
 
 > **Important**
 > After configuring a DNS server, **you might need to set the DNS server as localhost**
 > So change:
 > 	[/etc/dhcpd.conf](dhcpcd.conf.md) if this is also a DHCP server
-> 	[/etc/resolv.conf](/debianConfig/configurationFiles/etc/resolv.conf.md) if this is NOT connected to a DHCP server.
+> 	[/etc/resolv.conf](resolv.conf.md) if this is NOT connected to a DHCP server.
 # Installation
 
 ```powershell title="installation"
