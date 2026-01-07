@@ -1,45 +1,47 @@
-This folder will take notes about debian configuration commands and files.
+This folder contains notes about Debian configuration commands and files.
 
-I will have two note types:
-- Service configurations (ossh, dhcp, dns, ...)
-- Configuration files
+The documentation is divided into two types of notes:
 
-Service configurations will explain what kind of configurations we have to set up in order to get that service running.
-In the other hand, configuration files will gather and explain all configuration file options.
+- **Service configurations** (SSH, DHCP, DNS, etc.):  
+    These notes explain the steps and required settings needed to properly install and configure each service so that it works correctly.
+    
+- **Configuration files**:  
+    These notes collect and explain the available options and directives found in configuration files, describing what each option does and how it affects the system.
+
 # Index - Service configurations
--  [networkInterfaces](networkInterfaces.md) (not a service though)
-- [openssh](openssh.md)
-- [dhcp](dhcp.md)
-- [dns](dns.md)
-- [routing](routing.md)
-- [ldap](ldap.md)
-- [www](/debianConfig/serviceConfigurations/www.md)
-- [docker](/debianConfig/serviceConfigurations/docker.md)
-- [smb](/debianConfig/serviceConfigurations/smb.md)
-- [backups](/debianConfig/serviceConfigurations/backups.md) - Segurtasun kopiak
-- [task automatisations](/debianConfig/serviceConfigurations/taskAutomatisations.md) - Ataza automatizazioa
+-  [networkInterfaces](/linux/debianConfig/serviceConfigurations/networkInterfaces.md) (networking)
+- [openssh](/linux/debianConfig/serviceConfigurations/openssh.md)
+- [dhcp](/linux/debianConfig/serviceConfigurationsdhcp.md)
+- [dns](/linux/debianConfig/serviceConfigurationsdns.md)
+- [routing](/linux/debianConfig/serviceConfigurationsrouting.md)
+- [ldap](/linux/debianConfig/serviceConfigurationsldap.md)
+- [www](/linux/debianConfig/serviceConfigurations/www.md)
+- [docker](/linux/debianConfig/serviceConfigurations/docker.md)
+- [smb](/linux/debianConfig/serviceConfigurations/smb.md)
+- [backups](/linux/debianConfig/serviceConfigurations/backups.md) - Segurtasun kopiak
+- [task automatisations](/linux/debianConfig/serviceConfigurations/taskAutomatisations.md) - Ataza automatizazioa
 
 # Index - Configuration files
 `network interfaces - openssh`
 - /etc
-	- /[dhcpcd.conf](dhcpcd.conf.md) - Change DNS on this file after configuring a DNS server IF **this is a DHCP server**.
-	- /[resolv.conf](resolv.conf.md) - Change DNS on this file after configuring a DNS server IF **this is *NOT* a DHCP server** (it will be automatically changed by [dhcpd.conf])
+	- /[dhcpcd.conf](/linux/debianConfig/configurationFiles/etc/dhcpcd.conf.md) - Change DNS on this file after configuring a DNS server IF **this is a DHCP server**.
+	- /[resolv.conf](/linux/debianConfig/configurationFiles/etc/resolv.conf.md) - Change DNS on this file after configuring a DNS server IF **this is *NOT* a DHCP server** (it will be automatically changed by [dhcpd.conf])
 	- /network
-		- /[interfaces](interfaces.md)
-	- /[hostname](hostname.md)
+		- /[interfaces](/linux/debianConfig/configurationFiles/etc/interfaces.md)
+	- /[hostname](/linux/debianConfig/configurationFiles/etc/hostname.md)
 `dhcp`
 	- /default
-		- /[isc-dhcp-server](isc-dhcp-server.md)
+		- /[isc-dhcp-server](/linux/debianConfig/configurationFiles/etc/default/isc-dhcp-server.md)
 	- /dhcp
-		- /[dhcpd.conf](dhcpd.conf.md)
+		- /[dhcpd.conf](/linux/debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md)
 `dns`
 	- /bind
-		- /[named.conf.options](named.conf.options.md)
-		- /[named.conf.local](named.conf.local.md)
-		- /[exampleDomainName.db](exampleDomainName.db.md) - E.g. /zalduabat.db
-		- /[db.reversedIp](db.reversedIp.md) - E.g. /db.192.168.42
+		- /[named.conf.options](/linux/debianConfig/configurationFiles/etc/bind/named.conf.options.md)
+		- /[named.conf.local](/linux/debianConfig/configurationFiles/etc/bind/named.conf.local.md)
+		- /[exampleDomainName.db](/linux/debianConfig/configurationFiles/etc/bind/exampleDomainName.db.md) - E.g. /zalduabat.db
+		- /[db.reversedIp](/linux/debianConfig/configurationFiles/etc/bind/db.reversedIp.md) - E.g. /db.192.168.42
 `routing`
-	- /[sysctl.conf](/debianConfig/configurationFiles/etc/sysctl.conf.md)
+	- /[sysctl.conf](/linux/debianConfig/configurationFiles/etc/sysctl.conf.md)
 `ldap`
 `www`
 `docker`
