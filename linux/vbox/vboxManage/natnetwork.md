@@ -1,4 +1,7 @@
 Usage - Create, modify, and manage a NAT network.
+
+> Important
+> Nat network won't work if we are using inet (internal net) interfaces
 ## Example
 
 ```powershell

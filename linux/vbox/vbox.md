@@ -12,3 +12,12 @@ This folder will take notes about VBox configurations.
 - [snapshot](/linux/vbox/vboxManage/snapshot.md)
 - [startvm](/linux/vbox/vboxManage/startvm.md)
 - [clonevm](/linux/vbox/vboxManage/clonevm.md)
+
+> Important
+> Nat network won't work if we are using inet (internal net) interfaces
+
+```powershell title="inet interface declaration"
+vboxmanage modifyvm "zalduazerb1" --nic7 intnet --mac-address7 000102030107 --intnet7 zaldua1
+```
+
+We don't need to create a network, just declaring the inet name on --intnetN parameter is enough

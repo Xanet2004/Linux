@@ -96,8 +96,8 @@ VBoxManage modifyvm "zalduazerb1" --memory 2048 --cpus 2
 
 # NICs
 VBoxManage modifyvm "zalduazerb1" --nic1 nat --mac-address1 000102030101
-vboxmanage modifyvm "zalduazerb1" --nic7 intnet --mac-address7 000102030107 --intnet7="zaldua1"
-vboxmanage modifyvm "zalduazerb1" --nic8 intnet --mac-address8 000102030108 --intnet8="zaldua2"
+vboxmanage modifyvm "zalduazerb1" --nic7 intnet --mac-address7 000102030107 --intnet7 zaldua1
+vboxmanage modifyvm "zalduazerb1" --nic8 intnet --mac-address8 000102030108 --intnet8 zaldua2
 
 # ISO controller
 VBoxManage storagectl "zalduazerb1" --name "IDE" --add ide --controller PIIX4
@@ -115,7 +115,7 @@ VBoxManage storageattach "zalduazerb1" --storagectl "SATA" --port 0 --device 0 -
 
 
 # PORT REDIRECTION
-VBoxManage modifyvm "zalduazerb1" --natpf1 "ssh,tcp,,2222,,22"
+VBoxManage modifyvm "zalduazerb1" --natpf1 "ssh,tcp,,3222,,22"
 
 
 # SNAPSHOT
@@ -124,6 +124,46 @@ VBoxManage snapshot "zalduazerb1" take "00_beforeInitialisation" --description="
 
 # RUN
 VBoxManage startvm "zalduazerb1"
+```
+
+```powershell title="zalduabez2"
+# MACHINE CONF
+# zalduabez2
+VBoxManage createvm --name "zalduabez2" --ostype "Debian_64" --register --basefolder "C:\Users\xanet\VirtualBox VMs\Linux\02-zaldua" --groups "/zaldua1"
+
+# Basic conf
+VBoxManage modifyvm "zalduabez2" --memory 2048 --cpus 2
+
+# NICs
+VBoxManage modifyvm "zalduabez2" --nic1 nat --mac-address1 000102030101
+vboxmanage modifyvm "zalduabez2" --nic7 intnet --mac-address7 000102030107 --intnet7 zaldua1
+vboxmanage modifyvm "zalduabez2" --nic8 intnet --mac-address8 000102030108 --intnet8 zaldua2
+
+# ISO controller
+VBoxManage storagectl "zalduabez2" --name "IDE" --add ide --controller PIIX4
+
+# HDD controller
+VBoxManage storagectl "zalduabez2" --name "SATA" --add sata --controller IntelAhci --portcount 1  # we could use a higher port number to attach more than one disks
+
+# ISO attach
+VBoxManage storageattach "zalduabez2" --storagectl "IDE" --port 0 --device 0 --type dvddrive --medium "C:\Users\xanet\SynologyDrive\Study\Mondragon\3. urtea\AzpiegiturakEtaSistemak\ISO\debian-13.2.0-amd64-netinst.iso"
+
+# Create medium
+VBoxManage createmedium disk --filename "C:\Users\xanet\VirtualBox VMs\Linux\02-zaldua\zaldua1\zalduabez2\zalduabez2-disk" --size "120000" --format VDI
+# HDD attach
+VBoxManage storageattach "zalduabez2" --storagectl "SATA" --port 0 --device 0 --type hdd --medium "C:\Users\xanet\VirtualBox VMs\Linux\02-zaldua\zaldua1\zalduabez2\zalduabez2-disk.vdi"
+
+
+# PORT REDIRECTION
+VBoxManage modifyvm "zalduabez2" --natpf1 "ssh,tcp,,3223,,22"
+
+
+# SNAPSHOT
+VBoxManage snapshot "zalduabez2" take "00_beforeInitialisation" --description="This is the virtual machine before starting it for the first time."
+
+
+# RUN
+VBoxManage startvm "zalduabez2"
 ```
 
 ```powershell title="zalduabez1"
@@ -136,7 +176,7 @@ VBoxManage modifyvm "zalduabez1" --memory 2048 --cpus 2
 
 # NIC
 vboxmanage modifyvm "zalduabez1" --nic1 nat --mac-address1 000102030111
-vboxmanage modifyvm "zalduabez1" --nic7 intnet --mac-address7 000102030117 --intnet7="zaldua1"
+vboxmanage modifyvm "zalduabez1" --nic7 intnet --mac-address7 000102030117 --intnet7 zaldua1
 
 # ISO controller
 VBoxManage storagectl "zalduabez1" --name "IDE" --add ide --controller PIIX4

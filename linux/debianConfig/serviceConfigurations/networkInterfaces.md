@@ -43,10 +43,3 @@ systemctl restart networking
 ifup enp0s18
 ifup enp0s19
 ```
-
-## DHCP network problem
-
-ifdown enp0s18
-ifup enp0s18
-ip addr flush dev enp0s18
-systemctl restart networking

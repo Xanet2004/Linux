@@ -84,11 +84,12 @@ zaldua2: 192.168.44.0/23
 	Last: 192.168.45.254
 	Broadcast: 192.168.45.255
 
+> WE WON'T CREATE A NETWORK BECAUSE WE ARE USING INET INTERFACES
 # Used vbox commands
 
 We will create zaldua1zerb1 and then clone it. This way, we don't need to make through the installation process for every machine.
 
-```powershell title="network"
+```powershell title="natnetwork"
 # NETWORK CONF
 # network creation
 VBoxManage natnetwork add --netname "zaldua1" --network "192.168.42.0/23"
@@ -108,8 +109,8 @@ VBoxManage modifyvm "zaldua1zerb1" --memory 2048 --cpus 2
 
 # NICs
 VBoxManage modifyvm "zaldua1zerb1" --nic1 nat --mac-address1 000102030101
-vboxmanage modifyvm "zaldua1zerb1" --nic7 intnet --mac-address7 000102030107 --intnet7="zaldua1"
-vboxmanage modifyvm "zaldua1zerb1" --nic8 intnet --mac-address8 000102030108 --intnet8="zaldua2"
+vboxmanage modifyvm "zaldua1zerb1" --nic7 intnet --mac-address7 000102030107 --intnet7 zaldua1
+vboxmanage modifyvm "zaldua1zerb1" --nic8 intnet --mac-address8 000102030108 --intnet8 zaldua2
 
 # ISO controller
 VBoxManage storagectl "zaldua1zerb1" --name "IDE" --add ide --controller PIIX4
@@ -148,7 +149,7 @@ VBoxManage modifyvm "zaldua1bez1" --memory 2048 --cpus 2
 
 # NIC
 vboxmanage modifyvm "zaldua1bez1" --nic1 none
-vboxmanage modifyvm "zaldua1bez1" --nic7 intnet --mac-address7 000102030117 --intnet7="zaldua1"
+vboxmanage modifyvm "zaldua1bez1" --nic7 intnet --mac-address7 000102030117 --intnet7 zaldua1
 
 # ISO controller
 VBoxManage storagectl "zaldua1bez1" --name "IDE" --add ide --controller PIIX4
@@ -234,7 +235,7 @@ VBoxManage clonevm "zaldua1zerb1" --basefolder "C:\Users\xanet\VirtualBox VMs\Li
 ```
 
 ```powershell title="terminal - reconfigure network interfaces"
-VBoxManage modifyvm "zaldua2zerb1" --macaddress1 000102030201 --macaddress7 000102030207 --intnet7="zaldua2" --nic8 none
+VBoxManage modifyvm "zaldua2zerb1" --macaddress1 000102030201 --macaddress7 000102030207 --intnet7 zaldua2 --nic8 none
 ```
 
 ```powershell title="terminal - NAT port redirections"
@@ -297,7 +298,7 @@ VBoxManage clonevm "zaldua1bez1" --basefolder "C:\Users\xanet\VirtualBox VMs\Lin
 ```
 
 ```powershell title="terminal - reconfigure network interfaces"
-VBoxManage modifyvm "zaldua2bez1" --macaddress7 000102030217 --intnet7="zaldua2"
+VBoxManage modifyvm "zaldua2bez1" --macaddress7 000102030217 --intnet7 zaldua2
 ```
 
 ```powershell title="terminal - snapshot"

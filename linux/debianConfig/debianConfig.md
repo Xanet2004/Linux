@@ -8,7 +8,7 @@ The documentation is divided into two types of notes:
     These notes collect and explain the available options and directives found in configuration files, describing what each option does and how it affects the system.
 
 # Index - Service configurations
--  [networkInterfaces](/linux/debianConfig/serviceConfigurations/networkInterfaces.md) (networking)
+- [networkInterfaces](/linux/debianConfig/serviceConfigurations/networkInterfaces.md) (networking)
 - [openssh](/linux/debianConfig/serviceConfigurations/openssh.md)
 - [dhcp](/linux/debianConfig/serviceConfigurations/dhcp.md)
 - [dns](/linux/debianConfig/serviceConfigurations/dns.md)

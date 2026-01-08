@@ -24,6 +24,15 @@ VBoxManage modifyvm "zaldua1zerb1" --nic1 nat --mac-address1 000102030401
 vboxmanage modifyvm "zaldua1zerb1" --nic8 intnet --mac-address8 000102030408 --intnet8="zaldua1"
 ```
 
+> Important
+> Nat network won't work if we are using inet (internal net) interfaces
+
+```powershell title="inet interface declaration"
+vboxmanage modifyvm "zalduazerb1" --nic7 intnet --mac-address7 000102030107 --intnet7 zaldua1
+```
+
+We don't need to create a network, just declaring the inet name on --intnetN parameter is enough
+
 ## Port Forwarding with NAT
 ```powershell title="NAT: Port forwarding"
 VBoxManage modifyvm "zaldua1zerb1" --natpf1 "ssh,tcp,,2222,,22"

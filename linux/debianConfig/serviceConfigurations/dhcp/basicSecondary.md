@@ -46,3 +46,51 @@ subnet 192.168.44.0 netmask 255.255.254.0 {
     failover peer "dhcp-failover";
 }
 ```
+
+---
+
+# Chatgpt correction:
+
+```powershell title="/etc/dhcp/dhcpd.conf"
+option domain-name "zalduabat.eus";
+option domain-name-servers 192.168.42.2, 192.168.44.4;
+
+#authoritative; # IMPORTANT TO COMMENT THIS ON THE SECONDARY SERVER
+
+default-lease-time 600;
+max-lease-time 7200;
+
+failover peer "dhcp-failover" {
+    secondary;                  # this is now the secondary
+    address 192.168.44.5;       # secondary server IP
+    port 647;
+    peer address 192.168.44.4;  # primary server IP
+    peer port 647;
+    max-response-delay 60;
+    max-unacked-updates 10;
+}
+
+shared-network zaldua-net {
+
+    # Subnet 1: 192.168.42.0/23
+    subnet 192.168.42.0 netmask 255.255.254.0 {
+        option routers 192.168.42.2;
+
+        pool {
+            failover peer "dhcp-failover";
+            range 192.168.42.100 192.168.42.200;
+        }
+    }
+
+    # Subnet 2: 192.168.44.0/23
+    subnet 192.168.44.0 netmask 255.255.254.0 {
+        option routers 192.168.44.2;
+
+        pool {
+            failover peer "dhcp-failover";
+            range 192.168.44.100 192.168.44.200;
+        }
+    }
+}
+
+```

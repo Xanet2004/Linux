@@ -24,20 +24,6 @@
             }
           },
           {
-            "id": "6a90531987bce226",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "linux/activities/activities.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "activities"
-            }
-          },
-          {
             "id": "7fa9874345bab51a",
             "type": "leaf",
             "pinned": true,
@@ -84,9 +70,23 @@
               "icon": "lucide-file",
               "title": "debianConfig"
             }
+          },
+          {
+            "id": "6c85bbe2bbdd7659",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/debianConfig/serviceConfigurations/ldap.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ldap"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -267,18 +267,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "2fb8fb29fe8ff12b",
+  "active": "6c85bbe2bbdd7659",
   "lastOpenFiles": [
-    "linux/activities/vbox/01-zaldua1.md",
-    "linux/activities/vbox/02-zaldua.md",
     "linux/debianConfig/debianConfig.md",
-    "linux/activities/activities.md",
+    "linux/activities/vbox/01-zaldua1.md",
+    "linux/vbox/vbox.md",
     "linux/linux.md",
-    "linux/debianConfig/serviceConfigurations/routing.md",
+    "linux/activities/activities.md",
     "linux/debianConfig/serviceConfigurations/dhcp/basicSecondary.md",
-    "linux/debianConfig/serviceConfigurations/dhcp/basicPrimary.md",
+    "linux/vbox/vboxManage/natnetwork.md",
     "linux/debianConfig/serviceConfigurations/dhcp.md",
+    "linux/activities/vbox/02-zaldua.md",
+    "linux/vbox/vboxManage/modifyvm.md",
     "linux/debianConfig/serviceConfigurations/networkInterfaces.md",
+    "linux/debianConfig/serviceConfigurations/dhcp/basicPrimary.md",
+    "linux/debianConfig/serviceConfigurations/routing.md",
     "linux/debianConfig/serviceConfigurations/www/https.md",
     "linux/debianConfig/serviceConfigurations/www.md",
     "linux/debianConfig/serviceConfigurations/www/pageByDomainName.md",
@@ -295,9 +298,6 @@
     "linux/debianConfig/serviceConfigurations/dns.md",
     "linux/debianConfig/serviceConfigurations/dns/testCommands.md",
     "linux/debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md",
-    "linux/debianConfig/serviceConfigurations/openssh.md",
-    "linux/debianConfig/configurationFiles/etc/default/isc-dhcp-server.md",
-    "linux/debianConfig/configurationFiles/etc/hostname.md",
     "windows",
     "linux",
     "Untitled.base",
