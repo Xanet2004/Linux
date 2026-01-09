@@ -2,7 +2,6 @@ DNS Translates domain names into IP addresses so devices can locate each other o
 # Index
 - [Master](/linux/debianConfig/serviceConfigurations/dns/basicMaster.md)
 - [Slave](/linux/debianConfig/serviceConfigurations/dns/basicSlave.md)
-- [DHCP assigns DNS to clients]()
 - [Views](/linux/debianConfig/serviceConfigurations/dns/views.md)
 - [Test Commands](/linux/debianConfig/serviceConfigurations/dns/testCommands.md)
 

@@ -24,6 +24,34 @@
             }
           },
           {
+            "id": "d72c79a52dd40650",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/vbox/vbox.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "vbox"
+            }
+          },
+          {
+            "id": "74882a33d8d08fe3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/vbox/vboxManage/modifyvm.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "modifyvm"
+            }
+          },
+          {
             "id": "7fa9874345bab51a",
             "type": "leaf",
             "pinned": true,
@@ -37,22 +65,6 @@
               "pinned": true,
               "icon": "lucide-file",
               "title": "01-zaldua1"
-            }
-          },
-          {
-            "id": "2fb8fb29fe8ff12b",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "linux/activities/vbox/02-zaldua.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "02-zaldua"
             }
           },
           {
@@ -72,21 +84,49 @@
             }
           },
           {
-            "id": "6c85bbe2bbdd7659",
+            "id": "3b3b4335da38936a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/debianConfig/serviceConfigurations/ldap.md",
+                "file": "linux/debianConfig/serviceConfigurations/dhcp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ldap"
+              "title": "dhcp"
+            }
+          },
+          {
+            "id": "f97319c5887cd4d9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "dhcpd.conf"
+            }
+          },
+          {
+            "id": "d38bf3b23473e05b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/debianConfig/serviceConfigurations/dns.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "dns"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -139,8 +179,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "afcdc08298a854aa",
@@ -160,8 +199,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "3bda3df6b02d79ee",
@@ -267,37 +305,37 @@
       "bases:Create new base": false
     }
   },
-  "active": "6c85bbe2bbdd7659",
+  "active": "f97319c5887cd4d9",
   "lastOpenFiles": [
+    "linux/debianConfig/serviceConfigurations/dhcp.md",
     "linux/debianConfig/debianConfig.md",
+    "linux/debianConfig/serviceConfigurations/dns.md",
+    "linux/debianConfig/serviceConfigurations/dns/views.md",
+    "().md",
     "linux/activities/vbox/01-zaldua1.md",
     "linux/vbox/vbox.md",
-    "linux/linux.md",
-    "linux/activities/activities.md",
-    "linux/debianConfig/serviceConfigurations/dhcp/basicSecondary.md",
-    "linux/vbox/vboxManage/natnetwork.md",
-    "linux/debianConfig/serviceConfigurations/dhcp.md",
-    "linux/activities/vbox/02-zaldua.md",
     "linux/vbox/vboxManage/modifyvm.md",
-    "linux/debianConfig/serviceConfigurations/networkInterfaces.md",
-    "linux/debianConfig/serviceConfigurations/dhcp/basicPrimary.md",
-    "linux/debianConfig/serviceConfigurations/routing.md",
     "linux/debianConfig/serviceConfigurations/www/https.md",
     "linux/debianConfig/serviceConfigurations/www.md",
     "linux/debianConfig/serviceConfigurations/www/pageByDomainName.md",
     "linux/debianConfig/serviceConfigurations/www/pageByIp.md",
+    "linux/activities/vbox/02-zaldua.md",
+    "linux/vbox/vboxManage/natnetwork.md",
+    "linux/linux.md",
+    "linux/debianConfig/serviceConfigurations/networkInterfaces.md",
+    "linux/debianConfig/serviceConfigurations/ldap.md",
+    "linux/activities/activities.md",
+    "linux/debianConfig/serviceConfigurations/dhcp/basicSecondary.md",
+    "linux/debianConfig/serviceConfigurations/dhcp/basicPrimary.md",
+    "linux/debianConfig/serviceConfigurations/routing.md",
     "linux/debianConfig/serviceConfigurations/www",
     "Untitled.md",
-    "linux/debianConfig/serviceConfigurations/ldap.md",
     "linux/debianConfig/configurationFiles/etc/network/interfaces.md",
     "linux/debianConfig/configurationFiles/root/ldap/add_content.ldif.md",
     "linux/debianConfig/configurationFiles/root/ldap",
     "linux/debianConfig/configurationFiles/root",
     "linux/debianConfig/configurationFiles/etc/interfaces.md",
     "linux/debianConfig/serviceConfigurations/dns/basicSlave.md",
-    "linux/debianConfig/serviceConfigurations/dns.md",
-    "linux/debianConfig/serviceConfigurations/dns/testCommands.md",
-    "linux/debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md",
     "windows",
     "linux",
     "Untitled.base",

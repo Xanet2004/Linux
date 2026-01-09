@@ -20,19 +20,19 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apa
 
 ```powershell title="/etc/apache2/sites-available/zalduabat-ssl.conf"
 <IfModule mod_ssl.c>
-<VirtualHost *:80>
-	ServerName www.zalduabat.eus
-	
-	ServerAdmin webmaster@zalduabat.eus
-	DocumentRoot /var/www/zalduabat
-	
-	SSLEngine on
-	SSLCertificateFile    /etc/apache2/ssl/apache.crt
-	SSLCertificateKeyFile /etc/apache2/ssl/apache.key
-	
-	ErrorLog ${APACHE_LOG_DIR}/error.log
-	ErrorLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
+	<VirtualHost *:443>
+		ServerName www.zalduabat.eus
+		
+		ServerAdmin webmaster@zalduabat.eus
+		DocumentRoot /var/www/zalduabat
+		
+		SSLEngine on
+		SSLCertificateFile    /etc/apache2/ssl/apache.crt
+		SSLCertificateKeyFile /etc/apache2/ssl/apache.key
+		
+		ErrorLog ${APACHE_LOG_DIR}/error.log
+		CustomLog ${APACHE_LOG_DIR}/access.log combined
+	</VirtualHost>
 </IfModule>
 ```
 

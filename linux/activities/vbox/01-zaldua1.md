@@ -567,6 +567,7 @@ serv1   IN  A   192.168.42.4
 serv2   IN  A   192.168.44.5 ; Not useful for LDAP so we are moving zalduabi clients to zalduabat
 client1 IN  A   192.168.42.10
 client2 IN  A   192.168.44.10 ; Not useful for LDAP so we are moving zalduabi clients to zalduabat
+ldap    IN  A   192.168.42.4
 ```
 ```powershell title="zaldua1zerb1 - /etc/bind/zalduabi.db"
 $TTL 86400

@@ -26,6 +26,22 @@ apt install apache2
 a2dissite 000-default.conf
 ```
 
+```powershell title="conf file"
+nano /etc/apache2/sites-available/zalduabat.conf
+```
+
+```powershell title="/etc/apache2/sites-available/zalduabat.conf"
+<VirtualHost 192.168.42.30:80>
+	#ServerName www.zalduabat.eus
+	
+	ServerAdmin webmaster@zalduabat.eus
+	DocumentRoot /var/www/zalduabat
+	
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+
 ```powershell title="create folder"
 mkdir /var/www/zalduabat
 ```
@@ -39,6 +55,10 @@ mkdir /var/www/zalduabat
 		<center>www.zalduabat.eus</center>
 	</body>
 </html>
+```
+
+```powershell title="add ip"
+ip address add 192.168.42.30/24 dev enp0s18
 ```
 
 ```powershell title="enable new page"

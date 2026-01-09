@@ -284,6 +284,10 @@ subnet 192.168.44.0 netmask 255.255.254.0 {
 }
 ```
 
+> Important
+> Do not use without pools to handle more than one network with failover service.
+> Use Shared Network better.
+
 ### Apply to subnets with pool
 
 ```powershell

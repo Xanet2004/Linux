@@ -6,7 +6,7 @@ The web pages can be defined by the IP or the domain name.
 We need to add a new IP on our server. This IP will be the same as the web page.
 
 ```powershell title="add ip"
-ip address add 192.168.42.30/24 dev enp0s3
+ip address add 192.168.42.30/24 dev enp0s18
 ```
 
 # Page Configuration
@@ -40,7 +40,7 @@ nano /etc/apache2/sites-available/zalduabat.conf
 	DocumentRoot /var/www/zalduabat
 	
 	ErrorLog ${APACHE_LOG_DIR}/error.log
-	ErrorLog ${APACHE_LOG_DIR}/access.log combined
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
 
