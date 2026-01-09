@@ -24,7 +24,7 @@
             }
           },
           {
-            "id": "d72c79a52dd40650",
+            "id": "2f3508a55daf3abf",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -70,7 +70,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -249,17 +249,23 @@
       "bases:Create new base": false
     }
   },
-  "active": "7fa9874345bab51a",
+  "active": "9b659480a5468693",
   "lastOpenFiles": [
-    "linux/debianConfig/debianConfig.md",
+    "linux/debianConfig/serviceConfigurations/www.md",
+    "linux/debianConfig/serviceConfigurations/docker.md",
+    "linux/debianConfig/serviceConfigurations/docker/wwwDocker.md",
+    "linux/debianConfig/serviceConfigurations/docker/wwwDockerStaticIP.md",
     "linux/debianConfig/serviceConfigurations/www/https.md",
+    "linux/debianConfig/serviceConfigurations/www/pageByDomainName.md",
+    "linux/debianConfig/debianConfig.md",
+    "linux/debianConfig/serviceConfigurations/docker",
     "linux/activities/vbox/01-zaldua1.md",
     "linux/vbox/vbox.md",
-    "linux/debianConfig/serviceConfigurations/www/pageByDomainName.md",
-    "linux/debianConfig/serviceConfigurations/www.md",
+    "linux/linux.md",
+    "linux/debianConfig/serviceConfigurations/example.md",
+    "linux/debianConfig/serviceConfigurations/dhcp.md",
     "linux/debianConfig/serviceConfigurations/ldap.md",
     "linux/debianConfig/serviceConfigurations/routing.md",
-    "linux/debianConfig/serviceConfigurations/dhcp.md",
     "linux/debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md",
     "linux/debianConfig/serviceConfigurations/dns.md",
     "linux/debianConfig/serviceConfigurations/dns/views.md",
@@ -268,25 +274,19 @@
     "linux/debianConfig/serviceConfigurations/www/pageByIp.md",
     "linux/activities/vbox/02-zaldua.md",
     "linux/vbox/vboxManage/natnetwork.md",
-    "linux/linux.md",
     "linux/debianConfig/serviceConfigurations/networkInterfaces.md",
     "linux/activities/activities.md",
     "linux/debianConfig/serviceConfigurations/dhcp/basicSecondary.md",
     "linux/debianConfig/serviceConfigurations/dhcp/basicPrimary.md",
     "linux/debianConfig/serviceConfigurations/www",
-    "Untitled.md",
-    "linux/debianConfig/configurationFiles/etc/network/interfaces.md",
-    "linux/debianConfig/configurationFiles/root/ldap/add_content.ldif.md",
     "linux/debianConfig/configurationFiles/root/ldap",
     "linux/debianConfig/configurationFiles/root",
-    "linux/debianConfig/configurationFiles/etc/interfaces.md",
     "windows",
     "linux",
     "Untitled.base",
     "linux/debianConfig/serviceConfigurations/dns",
     "linux/debianConfig/configurationFiles/etc/bind",
     "WhatsApp Sticker 2026-01-03 at 22.55.17",
-    "linux/debianConfig/configurationFiles/etc/dhcp",
     "garitanoJauntxikGorena.png",
     "Untitled.canvas"
   ]

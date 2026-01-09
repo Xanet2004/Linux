@@ -19,6 +19,7 @@ The documentation is divided into two types of notes:
 - [smb](/linux/debianConfig/serviceConfigurations/smb.md)
 - [backups](/linux/debianConfig/serviceConfigurations/backups.md) - Segurtasun kopiak
 - [task automatisations](/linux/debianConfig/serviceConfigurations/taskAutomatisations.md) - Ataza automatizazioa
+- [example](/linux/debianConfig/serviceConfigurations/example.md) - Example template
 
 # Index - Configuration files
 `network interfaces - openssh`
