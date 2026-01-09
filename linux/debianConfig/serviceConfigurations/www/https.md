@@ -44,7 +44,7 @@ a2enmod ssl
 a2ensite zalduabat.conf
 ```
 
-```powershell title="disable"
+```powershell title="reload website"
 systemctl reload apache2
 ```
 

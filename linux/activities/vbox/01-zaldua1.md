@@ -568,6 +568,7 @@ serv2   IN  A   192.168.44.5 ; Not useful for LDAP so we are moving zalduabi cli
 client1 IN  A   192.168.42.10
 client2 IN  A   192.168.44.10 ; Not useful for LDAP so we are moving zalduabi clients to zalduabat
 ldap    IN  A   192.168.42.4
+www     IN  A   192.168.42.30
 ```
 ```powershell title="zaldua1zerb1 - /etc/bind/zalduabi.db"
 $TTL 86400
@@ -597,7 +598,8 @@ $TTL 86400
 @   IN  NS  serv1.zalduabat.eus.
 
 4   IN  PTR serv1.zalduabat.eus.
-10 IN  PTR client1.zalduabat.eus.
+10  IN  PTR client1.zalduabat.eus.
+30  IN  PTR www.zalduabat.eus.
 ```
 ```powershell title="zaldua1zerb1 - /etc/bind/db.192.168.43"
 $TTL 86400
@@ -753,25 +755,270 @@ interface enp0s3
 static domain_name_servers=192.168.44.4 127.0.0.1 8.8.8.8
 ```
 
-## zaldua1zerb1 as router?
-## zaldua1zerb1 as router?
-## zaldua1zerb1 as router?
-## zaldua1zerb1 as router?
-## zaldua1zerb1 as router?
-## zaldua1zerb1 as router?
-## zaldua1zerb1 as router?
-## zaldua1zerb1 as router?
-## zaldua1zerb1 as router?
+## Routing
+
+Some vms don't have access to the internet. This is because they need a nat interface OR a router with outside access.
+This is why we are defining zaldua1zerb1 as router.
+
+```powershell title="zaldua1zerb1 - installation"
+apt install iptables iptables-persistent
+```
+
+```powershell title="zaldua1zerb1"
+nano /etc/sysctl.conf
+```
+
+```powershell title="zaldua1zerb1 - /etc/sysctl.conf"
+net.ipv4.ip_forward = 1 # 1 -> Turn forwarding on persistently
+```
+
+> Important
+> Seems that in new debian machines this file just doesn't work. We need to configure the next one:
+
+```powershell title="zaldua1zerb1"
+nano /etc/sysctl.d/99-ipforward.conf
+```
+
+```powershell title="zaldua1zerb1 - /etc/sysctl.d/99-ipforward.conf"
+net.ipv4.ip_forward = 1 # 1 -> Turn forwarding on persistently
+```
+
+```powershell title="zaldua1zerb1"
+systemctl enable systemd-sysctl
+systemctl start systemd-sysctl
+sysctl -p # Update changes
+```
+
+```powershell title="zaldua1zerb1 - Nat and forward rules"
+# Masquerade traffic coming from the 192.168.42.0/23 network
+# This rewrites the source IP to the IP of enp0s3 (Internet-facing interface)
+iptables -t nat -A POSTROUTING -s 192.168.42.0/23 -o enp0s3 -j MASQUERADE
+
+# Masquerade traffic coming from the 192.168.44.0/23 network
+# This allows hosts in this subnet to access the Internet
+iptables -t nat -A POSTROUTING -s 192.168.44.0/23 -o enp0s3 -j MASQUERADE
+
+
+# Allow forwarding of packets from internal network 192.168.42.0/23 to the Internet
+iptables -A FORWARD -s 192.168.42.0/23 -o enp0s3 -j ACCEPT
+
+# Allow forwarding of packets from internal network 192.168.44.0/23 to the Internet
+iptables -A FORWARD -s 192.168.44.0/23 -o enp0s3 -j ACCEPT
+
+# Allow return traffic for already established or related connections
+# This is required so replies from the Internet are accepted
+iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# Save
+netfilter-persistent save
+```
+
+Define server1 as gateway router
+
+```powershell title="zaldua1zerb1 - /etc/network/interfaces"
+allow-hotplug enp0s18
+iface enp0s18 inet static
+   address 192.168.44.5/23
+   gateway 192.168.44.2 # Outside Router ip
+```
+
+```powershell title="zaldua2zerb1 - /etc/network/interfaces"
+allow-hotplug enp0s18
+iface enp0s18 inet static
+   address 192.168.44.5/23
+   gateway 192.168.44.4 # Server1 as router
+```
+
+```powershell title="zaldua1zerb1 - /etc/dhcp/dhcpd.conf"
+...
+option routers 192.168.42.4; # zaldua1zerb1 as router on every zone configurations
+...
+option routers 192.168.44.4; # zaldua1zerb1 as router on every zone configurations
+...
+```
+
+```powershell title="zaldua2zerb1 - /etc/dhcp/dhcpd.conf"
+...
+option routers 192.168.42.4; # zaldua1zerb1 as router on every zone configurations
+...
+option routers 192.168.44.4; # zaldua1zerb1 as router on every zone configurations
+...
+```
+
+```powershell title="secondary server - persistent routers - /etc/network/interfaces"
+allow-hotplug enp0s18
+iface enp0s18 inet static
+   address 192.168.44.5/23
+   gateway 192.168.44.4 # zaldua1zerb1 as router
+   up ip route add 192.168.42.0/23 via 192.168.44.4
+   # For devices going to 192.168.42.0 go through 192.168.44.4
+```
 
 ## LDAP
 
-```powershell title="zaldua1zerb1 - template"
+```powershell title="zaldua1zerb1 - installation"
+apt update
+apt install slapd ldap-utils
+```
 
+```powershell title="zaldua1zerb1 - basic ldap conf"
+dpkg-reconfigure slapd
+> No
+> zalduabat.eus
+> zaldua
+> admin passwd
+> No
+> Yes
+
+systemctl restart slapd
+
+slapcat # see domain users / entities
+```
+
+```powershell title="zaldua1zerb1 - add user"
+mkdir /root/ldap/
+nano /root/ldap/add_content.ldif
+```
+
+```powershell title="zaldua1zerb1 - /root/ldap/add_content.ldif"
+# Add People OU
+dn: ou=People,dc=zalduabat,dc=eus
+objectClass: organizationalUnit
+ou: People
+
+# Add Xanet user
+dn: uid=xzaldua,ou=People,dc=zalduabat,dc=eus
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: xzaldua
+cn: Xanet Zaldua
+sn: Zaldua
+givenName: Xanet
+displayName: Xanet Zaldua
+uidNumber: 10000
+gidNumber: 5000
+homeDirectory: /home/xzaldua
+loginShell: /bin/bash
+userPassword: xzaldua
+gecos: Xanet Zaldua
+```
+
+```powershell title="zaldua1zerb1 - generate user"
+ldapadd -x -D cn=admin,dc=zalduabat,dc=eus -W -f /root/ldap/add_content.ldif
+# cn = creators name
+```
+
+```powershell title="server - see domain entities"
+slapcat
+```
+
+LDAP server is configured, so we need to install it on the clients now.
+
+```powershell title="all clients - installing ldap"
+apt install libnss-ldapd libpam-ldapd ldap-utils
+> ldap://ldap.zalduabat.eus
+> dc=zalduabat,dc=eus
+> passwd, group, shadow
+```
+
+```powershell title="all clients - /etc/pam.d/common-session"
+...
+session required pam_mkhomedir.so umask=0022 skel=/etc/skel
 ```
 
 ## WWW
 
-```powershell title="zaldua1zerb1 - template"
+```powershell title="zaldua1zerb1 - installation"
+apt update
+apt install apache2
+```
+
+```powershell title="zaldua1zerb1 - add ip"
+ip address add 192.168.42.30/24 dev enp0s18
+```
+
+```powershell title="create folder"
+mkdir /var/www/zalduabat
+```
+
+```powershell title="/var/www/zalduabat/index.html"
+<html>
+	<head>
+		<title>www.zalduabat.eus</title>
+	</head>
+	<body>
+		<center>www.zalduabat.eus</center>
+	</body>
+</html>
+```
+
+Create a conf file
+
+```powershell title="conf file"
+nano /etc/apache2/sites-available/zalduabat.conf
+```
+
+```powershell title="/etc/apache2/sites-available/zalduabat.conf"
+<VirtualHost *:80>
+	ServerName www.zalduabat.eus
+	
+	ServerAdmin webmaster@zalduabat.eus
+	DocumentRoot /var/www/zalduabat
+	
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+
+```powershell title="enable new page"
+a2ensite zalduabat.conf
+```
+
+```powershell title="disable"
+systemctl reload apache2
+```
+
+Now we want to get an https certificate for our page.
+
+```powershell title="zaldua1zerb1 - create folder"
+mkdir /etc/apache2/ssl
+```
+
+```powershell title="zaldua1zerb1 - generate certificate"
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
+```
+
+It doesn't matter how you answer the questions. But is more reliable for people if you do it well.
+
+```powershell title="zaldua1zerb1 - /etc/apache2/sites-available/zalduabat-ssl.conf"
+<IfModule mod_ssl.c>
+	<VirtualHost *:443>
+		ServerName www.zalduabat.eus
+		
+		ServerAdmin webmaster@zalduabat.eus
+		DocumentRoot /var/www/zalduabat
+		
+		SSLEngine on
+		SSLCertificateFile    /etc/apache2/ssl/apache.crt
+		SSLCertificateKeyFile /etc/apache2/ssl/apache.key
+		
+		ErrorLog ${APACHE_LOG_DIR}/error.log
+		CustomLog ${APACHE_LOG_DIR}/access.log combined
+	</VirtualHost>
+</IfModule>
+```
+
+```powershell title="zaldua1zerb1 - enable ssl module"
+a2enmod ssl
+```
+
+```powershell title="zaldua1zerb1 - enable new page"
+a2ensite zalduabat.conf
+```
+
+```powershell title="zaldua1zerb1 - reload website"
+systemctl reload apache2
 ```
 
 ## Docker

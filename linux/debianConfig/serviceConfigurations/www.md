@@ -57,6 +57,10 @@ mkdir /var/www/zalduabat
 </html>
 ```
 
+> Note
+> You can add a previously compiled frontend page here.
+> So it works easily with any framework app. Basic html, React, Astro, ...
+
 ```powershell title="add ip"
 ip address add 192.168.42.30/24 dev enp0s18
 ```
