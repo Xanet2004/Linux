@@ -21,7 +21,7 @@ VBoxManage modifyvm "zaldua1zerb1" --memory 2048 --cpus 2
 
 VBoxManage modifyvm "zaldua1zerb1" --nic1 nat --mac-address1 000102030401
 
-vboxmanage modifyvm "zaldua1zerb1" --nic8 intnet --mac-address8 000102030408 --intnet8="zaldua1"
+vboxmanage modifyvm "zaldua1zerb1" --nic8 intnet --mac-address8 000102030408 --intnet8 zaldua1
 ```
 
 > Important
@@ -29,6 +29,10 @@ vboxmanage modifyvm "zaldua1zerb1" --nic8 intnet --mac-address8 000102030408 --i
 
 ```powershell title="inet interface declaration"
 vboxmanage modifyvm "zalduazerb1" --nic7 intnet --mac-address7 000102030107 --intnet7 zaldua1
+```
+
+```powershell title="natnetwork interface declaration"
+VBoxManage modifyvm "zalduazerb1" --nic7 natnetwork --mac-address7 000102030107 --nat-network7 wpopblnetwork
 ```
 
 We don't need to create a network, just declaring the inet name on --intnetN parameter is enough
