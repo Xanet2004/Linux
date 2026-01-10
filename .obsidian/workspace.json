@@ -68,65 +68,9 @@
               "icon": "lucide-file",
               "title": "debianConfig"
             }
-          },
-          {
-            "id": "82ba27191e206b2b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "linux/debianConfig/serviceConfigurations/dhcp.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "dhcp"
-            }
-          },
-          {
-            "id": "f8f0ef32ecda30e2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "linux/debianConfig/serviceConfigurations/smb.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "smb"
-            }
-          },
-          {
-            "id": "0b46af514b887d1b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "linux/debianConfig/serviceConfigurations/smb/shareFolderSingleUser.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "shareFolderSingleUser"
-            }
-          },
-          {
-            "id": "02dfa19b7df3ab73",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "linux/debianConfig/serviceConfigurations/smb/shareFolderGroup.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "shareFolderGroup"
-            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -307,38 +251,45 @@
       "bases:Create new base": false
     }
   },
-  "active": "02dfa19b7df3ab73",
+  "active": "9b659480a5468693",
   "lastOpenFiles": [
+    "linux/debianConfig/serviceConfigurations/docker.md",
+    "linux/debianConfig/debianConfig.md",
+    "linux/activities/vbox/01-zaldua1.md",
+    "linux/debianConfig/serviceConfigurations/www.md",
+    "linux/debianConfig/serviceConfigurations/docker/wwwDockerStaticIP.md",
+    "linux/debianConfig/configurationFiles/etc/apache2/mods-enabled.md",
+    "linux/debianConfig/configurationFiles/etc/apache2/mods-available.md",
+    "linux/debianConfig/configurationFiles/etc/apache2/sites-enabled.md",
+    "linux/debianConfig/configurationFiles/etc/apache2/sites-available/default-ssl.conf.md",
+    "linux/debianConfig/configurationFiles/etc/apache2/sites-available/000-default.conf.md",
+    "linux/debianConfig/configurationFiles/etc/apache2/sites-available",
+    "linux/debianConfig/configurationFiles/etc/apache2/sites-available.md",
+    "linux/debianConfig/configurationFiles/etc/apache2/ports.conf.md",
+    "linux/debianConfig/configurationFiles/etc/apache2",
+    "linux/debianConfig/serviceConfigurations/ldap.md",
+    "linux/debianConfig/serviceConfigurations/example.md",
+    "linux/debianConfig/configurationFiles/root/ldap/add_content.ldif.md",
+    "linux/debianConfig/serviceConfigurations/dhcp.md",
+    "linux/debianConfig/serviceConfigurations/smb.md",
+    "linux/debianConfig/configurationFiles/etc/samba/smb.conf.md",
     "linux/debianConfig/serviceConfigurations/smb/shareFolderSingleUser.md",
     "linux/debianConfig/serviceConfigurations/smb/shareFolderGroup.md",
-    "linux/debianConfig/serviceConfigurations/smb.md",
     "linux/debianConfig/serviceConfigurations/smb",
-    "linux/activities/vbox/01-zaldua1.md",
-    "linux/debianConfig/debianConfig.md",
     "linux/linux.md",
     "linux/vbox/vbox.md",
     "linux/debianConfig/serviceConfigurations/samba",
-    "linux/debianConfig/configurationFiles/etc/samba/smb.conf.md",
-    "linux/debianConfig/serviceConfigurations/dhcp.md",
     "linux/debianConfig/configurationFiles/etc/samba",
-    "linux/debianConfig/serviceConfigurations/docker.md",
     "windows/01_Windows/PowerShell.md",
     "linux/vbox/vboxManage/createvm.md",
     "windows/01_Windows/Windows.md",
     "linux/vbox/vboxManage/modifyvm.md",
-    "linux/vbox/vboxManage/natnetwork.md",
-    "windows/windows.md",
-    "linux/vbox/vboxManage/clonevm.md",
-    "windows/01_Windows/PowerShell Additions.md",
     "windows/01_Windows/ActiveDirectory/img02-user.png",
     "windows/01_Windows/ActiveDirectory/ariketa_ad_erabiltzaileak_taldeak.pdf",
     "windows/01_Windows/ActiveDirectory/10_ad_erabiltzaileak_taldeak.pdf",
     "windows/01_Windows/ActiveDirectory/08_ad_sarrera.pdf",
     "windows/01_Windows/03_windows_instalazioa.pdf",
     "windows/01_Windows/07_filesystem.pdf",
-    "windows/01_Windows/06_hostname.pdf",
-    "windows/01_Windows/ActiveDirectory/OU Ariketak.md",
-    "windows/01_Windows/ActiveDirectory/09_ad_instalazioa.pdf",
     "windows/01_Windows/ActiveDirectory/img08-UserInGroup.png",
     "windows/01_Windows/ActiveDirectory/img07-GroupCreated.png",
     "windows/01_Windows/ActiveDirectory/img06-user.png",
@@ -346,13 +297,6 @@
     "windows/01_Windows/ActiveDirectory/img04-user.png",
     "windows/01_Windows/ActiveDirectory/img03-user.png",
     "windows/01_Windows/ActiveDirectory/img01-OU.png",
-    "linux/debianConfig/serviceConfigurations/www.md",
-    "linux/debianConfig/serviceConfigurations/docker/wwwDocker.md",
-    "linux/debianConfig/serviceConfigurations/docker/wwwDockerStaticIP.md",
-    "linux/debianConfig/serviceConfigurations/www/https.md",
-    "linux/debianConfig/serviceConfigurations/www/pageByDomainName.md",
-    "linux/debianConfig/serviceConfigurations/example.md",
-    "linux/debianConfig/serviceConfigurations/ldap.md",
     "garitanoJauntxikGorena.png",
     "Untitled.canvas"
   ]

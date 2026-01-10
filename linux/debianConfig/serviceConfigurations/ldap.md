@@ -1,7 +1,7 @@
 Service to handle users and domains.
 
 # File index
-- [/root/ldap/add_content.ldif](/linux/debianConfig/configurationFiles/root/ldap/add_content.ldif.md) - Example
+- [/root/ldap/add_content.ldif](/linux/debianConfig/configurationFiles/root/ldap/add_content.ldif.md)
 
 # Installation
 

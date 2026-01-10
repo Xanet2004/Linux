@@ -51,5 +51,5 @@ apt insall cifs-utils gvfs-backend
 ```
 
 ```powershell title="file explorer"
-smb://smb.zalduabat.eus/shared
+smb://smb.zalduabat.eus/sharedformembers
 ```

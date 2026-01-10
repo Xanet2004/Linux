@@ -43,6 +43,9 @@ The documentation is divided into two types of notes:
 `routing`
 	- /[sysctl.conf](/linux/debianConfig/configurationFiles/etc/sysctl.conf.md)
 `ldap`
+- /root
+	- /ldap
+		- /[add_content.ldif](/linux/debianConfig/configurationFiles/root/ldap/add_content.ldif.md)
 `www`
 `docker`
 `smb`
