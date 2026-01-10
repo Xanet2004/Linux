@@ -70,35 +70,63 @@
             }
           },
           {
-            "id": "a365bcc7aa8849d4",
+            "id": "82ba27191e206b2b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "windows/01_Windows/PowerShell.md",
+                "file": "linux/debianConfig/serviceConfigurations/dhcp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PowerShell"
+              "title": "dhcp"
             }
           },
           {
-            "id": "8c8130b95176d40d",
+            "id": "f8f0ef32ecda30e2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/vbox/vboxManage/createvm.md",
+                "file": "linux/debianConfig/serviceConfigurations/smb.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "createvm"
+              "title": "smb"
+            }
+          },
+          {
+            "id": "0b46af514b887d1b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/debianConfig/serviceConfigurations/smb/shareFolderSingleUser.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "shareFolderSingleUser"
+            }
+          },
+          {
+            "id": "02dfa19b7df3ab73",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/debianConfig/serviceConfigurations/smb/shareFolderGroup.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "shareFolderGroup"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -157,7 +185,7 @@
       {
         "id": "afcdc08298a854aa",
         "type": "tabs",
-        "dimension": 22.698744769874477,
+        "dimension": 22.698744769874473,
         "children": [
           {
             "id": "ee6371f09bc8157c",
@@ -279,16 +307,26 @@
       "bases:Create new base": false
     }
   },
-  "active": "a365bcc7aa8849d4",
+  "active": "02dfa19b7df3ab73",
   "lastOpenFiles": [
-    "linux/vbox/vboxManage/createvm.md",
+    "linux/debianConfig/serviceConfigurations/smb/shareFolderSingleUser.md",
+    "linux/debianConfig/serviceConfigurations/smb/shareFolderGroup.md",
+    "linux/debianConfig/serviceConfigurations/smb.md",
+    "linux/debianConfig/serviceConfigurations/smb",
+    "linux/activities/vbox/01-zaldua1.md",
+    "linux/debianConfig/debianConfig.md",
+    "linux/linux.md",
+    "linux/vbox/vbox.md",
+    "linux/debianConfig/serviceConfigurations/samba",
+    "linux/debianConfig/configurationFiles/etc/samba/smb.conf.md",
+    "linux/debianConfig/serviceConfigurations/dhcp.md",
+    "linux/debianConfig/configurationFiles/etc/samba",
+    "linux/debianConfig/serviceConfigurations/docker.md",
     "windows/01_Windows/PowerShell.md",
+    "linux/vbox/vboxManage/createvm.md",
     "windows/01_Windows/Windows.md",
     "linux/vbox/vboxManage/modifyvm.md",
     "linux/vbox/vboxManage/natnetwork.md",
-    "linux/activities/vbox/01-zaldua1.md",
-    "linux/linux.md",
-    "linux/vbox/vbox.md",
     "windows/windows.md",
     "linux/vbox/vboxManage/clonevm.md",
     "windows/01_Windows/PowerShell Additions.md",
@@ -301,30 +339,20 @@
     "windows/01_Windows/06_hostname.pdf",
     "windows/01_Windows/ActiveDirectory/OU Ariketak.md",
     "windows/01_Windows/ActiveDirectory/09_ad_instalazioa.pdf",
-    "windows/01_Windows/ActiveDirectory/11_ad_ekipoak.pdf",
-    "windows/01_Windows/ActiveDirectory/13_ad_gpo.pdf",
-    "windows/01_Windows/ActiveDirectory/ariketa_ad_shared.pdf",
     "windows/01_Windows/ActiveDirectory/img08-UserInGroup.png",
     "windows/01_Windows/ActiveDirectory/img07-GroupCreated.png",
     "windows/01_Windows/ActiveDirectory/img06-user.png",
     "windows/01_Windows/ActiveDirectory/img05-user.png",
     "windows/01_Windows/ActiveDirectory/img04-user.png",
     "windows/01_Windows/ActiveDirectory/img03-user.png",
-    "linux/debianConfig/debianConfig.md",
     "windows/01_Windows/ActiveDirectory/img01-OU.png",
     "linux/debianConfig/serviceConfigurations/www.md",
-    "linux/debianConfig/serviceConfigurations/docker.md",
     "linux/debianConfig/serviceConfigurations/docker/wwwDocker.md",
     "linux/debianConfig/serviceConfigurations/docker/wwwDockerStaticIP.md",
     "linux/debianConfig/serviceConfigurations/www/https.md",
     "linux/debianConfig/serviceConfigurations/www/pageByDomainName.md",
     "linux/debianConfig/serviceConfigurations/example.md",
-    "linux/debianConfig/serviceConfigurations/dhcp.md",
     "linux/debianConfig/serviceConfigurations/ldap.md",
-    "linux/debianConfig/serviceConfigurations/routing.md",
-    "linux/debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md",
-    "linux/debianConfig/serviceConfigurations/dns.md",
-    "linux/debianConfig/serviceConfigurations/dns/views.md",
     "garitanoJauntxikGorena.png",
     "Untitled.canvas"
   ]
