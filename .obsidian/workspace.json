@@ -24,33 +24,109 @@
             }
           },
           {
-            "id": "7aa851d222871f70",
+            "id": "e152633d8a90fb4a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/vbox/vbox.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "vbox"
+            }
+          },
+          {
+            "id": "dcdec091568559d3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/debianConfig/debianConfig.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "debianConfig"
+            }
+          },
+          {
+            "id": "6dcae209ef57baf9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/debianConfig/serviceConfigurations/www/www.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "www"
+            }
+          },
+          {
+            "id": "01639527dc887e43",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/debianConfig/serviceConfigurations/smb/smb.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "smb"
+            }
+          },
+          {
+            "id": "ce548a39d4474948",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/debianConfig/serviceConfigurations/smb/shareFolderSingleUser.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "shareFolderSingleUser"
+            }
+          },
+          {
+            "id": "8214d49d983f99aa",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "windows/windows.md",
+                "file": "linux/activities/vbox/01-zaldua1.md",
                 "mode": "source",
                 "source": false
               },
               "pinned": true,
               "icon": "lucide-file",
-              "title": "windows"
+              "title": "01-zaldua1"
             }
           },
           {
             "id": "a5b3e62aa3e40b8e",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "kp/notes/Linux-dns-smb-apache2.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Linux-dns-smb-apache2"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -233,11 +309,22 @@
   },
   "active": "a5b3e62aa3e40b8e",
   "lastOpenFiles": [
+    "linux/debianConfig/serviceConfigurations/smb/shareFolderSingleUser.md",
+    "linux/debianConfig/serviceConfigurations/smb/smb.md",
+    "kp/notes/Linux-dns-smb-apache2.md",
+    "linux/vbox/vbox.md",
+    "linux/linux.md",
     "linux/debianConfig/debianConfig.md",
+    "linux/activities/vbox/01-zaldua1.md",
+    "linux/debianConfig/serviceConfigurations/www/www.md",
+    "linux/debianConfig/serviceConfigurations/networkInterfaces.md",
+    "linux/debianConfig/serviceConfigurations/dns/dns.md",
+    "linux/debianConfig/serviceConfigurations/dhcp/basicPrimary.md",
+    "linux/debianConfig/serviceConfigurations/dhcp/dhcp.md",
     "windows/windows.md",
+    "kp/notes/Linux.md",
     "linux/debianConfig/serviceConfigurations/backups.md",
     "linux/debianConfig/serviceConfigurations/usersGroupsPermissions.md",
-    "linux/linux.md",
     "linux/wireshark/wireshark.md",
     "linux/wireshark/activities/DHCP/DHCP.pcapng",
     "linux/wireshark/activities/DNS/DNS - DHCP bezeroaren kontsulta.pcapng",
@@ -252,26 +339,15 @@
     "Untitled.md",
     "README.md",
     "kp/kp.md",
-    "kp/notes/Linux.md",
     "todo.md",
     "kp/notes/Windows.md",
     "linux/debianConfig/configurationFiles/etc/sysctl.conf.md",
-    "linux/debianConfig/serviceConfigurations/www/www.md",
     "linux/debianConfig/serviceConfigurations/service/example.md",
     "linux/debianConfig/configurationFiles/etc/service/example.conf.md",
     "linux/debianConfig/configurationFiles/etc/apache2/sites-available/000-default.conf.md",
-    "linux/debianConfig/configurationFiles/etc/apache2/sites-available/default-ssl.conf.md",
-    "windows/checks-ad-dns-client/outputs/img/server2-checkConnectivity/server2-checkConnectivity-02.png.md",
-    "windows/01_Windows/Windows.md",
-    "windows/01_Windows/PowerShellAdditions.md",
-    "windows/01_Windows/ActiveDirectory/OUAriketak.md",
-    "windows/01_Windows/PowerShell.md",
-    "windows/services/checks-ad-dns-client/outputs/server1-2-checkDomain.md",
     "windows/services/checks-ad-dns-client/outputs/img/server2-checkDomain/server2-checkDomain-02.png",
     "windows/services/checks-ad-dns-client/outputs/img/server1-checkDomain/server1-checkDomain-02.png",
-    "windows/services/checks-ad-dns-client/outputs/img/client-checkSession/client-checkConnectivity-01.png.md",
     "windows/services/checks-ad-dns-client/outputs/img/client-checkSession/client-checkSession-01.png",
-    "windows/services/services.md",
     "windows/services/checks-ad-dns-client/outputs/img/server1-checkDomain/server1-checkDomain-01.png",
     "windows/services/checks-ad-dns-client/outputs/img/server2-checkConnectivity/server2-checkConnectivity-03.png",
     "windows/services/checks-ad-dns-client/outputs/img/server2-checkConnectivity/server2-checkConnectivity-02.png",

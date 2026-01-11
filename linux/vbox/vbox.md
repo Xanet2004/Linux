@@ -21,3 +21,10 @@ vboxmanage modifyvm "zalduazerb1" --nic7 intnet --mac-address7 000102030107 --in
 ```
 
 We don't need to create a network, just declaring the inet name on --intnetN parameter is enough
+
+I had DHCP enabled on the internal networks????
+
+```powershell title="inet disable dhcp"
+VBoxManage dhcpserver remove --netname zaldua1
+VBoxManage dhcpserver remove --netname zaldua2
+```

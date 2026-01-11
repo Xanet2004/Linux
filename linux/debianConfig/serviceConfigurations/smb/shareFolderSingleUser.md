@@ -26,7 +26,7 @@ systemctl restart smbd
 # User configuration
 
 ```powershell title="zaldua1bez2 - installation"
-apt insall cifs-utils gvfs-backend
+apt insall cifs-utils gvfs-backends
 ```
 
 ```powershell title="file explorer"

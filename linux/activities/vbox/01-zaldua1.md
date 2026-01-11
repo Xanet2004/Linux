@@ -91,12 +91,12 @@ We will create zaldua1zerb1 and then clone it. This way, we don't need to make t
 
 ```powershell title="natnetwork"
 # NETWORK CONF
-# network creation
-VBoxManage natnetwork add --netname "zaldua1" --network "192.168.42.0/23"
-VBoxManage natnetwork add --netname "zaldua2" --network "192.168.44.0/23"
+# natnetwork creation -> we are using inet!
+#VBoxManage natnetwork add --netname "zaldua1" --network "192.168.42.0/23"
+#VBoxManage natnetwork add --netname "zaldua2" --network "192.168.44.0/23"
 
-natnetwork start --netname "zaldua1"
-natnetwork start --netname "zaldua2"
+#natnetwork start --netname "zaldua1"
+#natnetwork start --netname "zaldua2"
 ```
 
 ```powershell title="zaldua1zerb1"

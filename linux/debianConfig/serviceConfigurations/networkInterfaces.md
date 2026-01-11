@@ -30,6 +30,9 @@ iface enp0s18 inet static
    address 192.168.42.4/23
    gateway 192.168.42.2
 
+iface enp0s18 inet static   # -> we can have two ips!!!!!
+   address 192.168.42.30/23
+
 allow-hotplug enp0s19
 iface enp0s19 inet static
    address 192.168.44.4/23

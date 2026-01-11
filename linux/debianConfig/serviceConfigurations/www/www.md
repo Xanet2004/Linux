@@ -63,6 +63,14 @@ mkdir /var/www/zalduabat
 
 ```powershell title="add ip"
 ip address add 192.168.42.30/24 dev enp0s18
+
+
+# Static ip with network/interfaces
+# iface enp0s18 inet static
+#    address 192.168.42.4/23
+#
+# iface enp0s18 inet static
+#    address 192.168.42.30/23
 ```
 
 ```powershell title="enable new page"
