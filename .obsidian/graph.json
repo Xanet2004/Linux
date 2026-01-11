@@ -20,6 +20,20 @@
         "a": 1,
         "rgb": 14725458
       }
+    },
+    {
+      "query": "path:kp/",
+      "color": {
+        "a": 1,
+        "rgb": 12210912
+      }
+    },
+    {
+      "query": "file:todo",
+      "color": {
+        "a": 1,
+        "rgb": 5429216
+      }
     }
   ],
   "collapse-display": false,
