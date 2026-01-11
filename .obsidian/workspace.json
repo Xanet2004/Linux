@@ -38,9 +38,19 @@
               "icon": "lucide-file",
               "title": "windows"
             }
+          },
+          {
+            "id": "54438e0002f240d3",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -221,9 +231,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "750b2d3e4f0ec9c4",
+  "active": "54438e0002f240d3",
   "lastOpenFiles": [
+    "linux/debianConfig/debianConfig.md",
     "windows/windows.md",
+    "linux/debianConfig/serviceConfigurations/usersGroupsPermissions.md",
+    "linux/linux.md",
     "linux/wireshark/wireshark.md",
     "linux/wireshark/activities/DHCP/DHCP.pcapng",
     "linux/wireshark/activities/DNS/DNS - DHCP bezeroaren kontsulta.pcapng",
@@ -235,12 +248,10 @@
     "linux/wireshark/activities/DNS/DNS - zona transferentzia.pcapng",
     "linux/wireshark/activities/DNS/DNS - zona transferentzia DHCP.pcapng",
     "linux/wireshark/activities/DNS/DNS - lehenetsia.pcapng",
-    "linux/linux.md",
     "Untitled.md",
     "README.md",
     "kp/kp.md",
     "kp/notes/Linux.md",
-    "linux/debianConfig/debianConfig.md",
     "todo.md",
     "kp/notes/Windows.md",
     "linux/debianConfig/configurationFiles/etc/sysctl.conf.md",

@@ -10,6 +10,7 @@ The documentation is divided into two types of notes:
 # Index - Service configurations
 - [networkInterfaces](/linux/debianConfig/serviceConfigurations/networkInterfaces.md) (networking)
 - [openssh](/linux/debianConfig/serviceConfigurations/openssh.md)
+- [Users Groups and Permissions](/linux/debianConfig/serviceConfigurations/usersGroupsPermissions.md)
 - [dhcp](/linux/debianConfig/serviceConfigurations/dhcp.md)
 - [dns](/linux/debianConfig/serviceConfigurations/dns.md)
 - [routing](/linux/debianConfig/serviceConfigurations/routing.md)
