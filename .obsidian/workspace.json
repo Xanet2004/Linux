@@ -40,7 +40,7 @@
             }
           },
           {
-            "id": "54438e0002f240d3",
+            "id": "a5b3e62aa3e40b8e",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -231,10 +231,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "54438e0002f240d3",
+  "active": "a5b3e62aa3e40b8e",
   "lastOpenFiles": [
     "linux/debianConfig/debianConfig.md",
     "windows/windows.md",
+    "linux/debianConfig/serviceConfigurations/backups.md",
     "linux/debianConfig/serviceConfigurations/usersGroupsPermissions.md",
     "linux/linux.md",
     "linux/wireshark/wireshark.md",
@@ -255,7 +256,7 @@
     "todo.md",
     "kp/notes/Windows.md",
     "linux/debianConfig/configurationFiles/etc/sysctl.conf.md",
-    "linux/debianConfig/serviceConfigurations/www.md",
+    "linux/debianConfig/serviceConfigurations/www/www.md",
     "linux/debianConfig/serviceConfigurations/service/example.md",
     "linux/debianConfig/configurationFiles/etc/service/example.conf.md",
     "linux/debianConfig/configurationFiles/etc/apache2/sites-available/000-default.conf.md",
@@ -271,7 +272,6 @@
     "windows/services/checks-ad-dns-client/outputs/img/client-checkSession/client-checkConnectivity-01.png.md",
     "windows/services/checks-ad-dns-client/outputs/img/client-checkSession/client-checkSession-01.png",
     "windows/services/services.md",
-    "windows/machineCreation/machineCreation.md",
     "windows/services/checks-ad-dns-client/outputs/img/server1-checkDomain/server1-checkDomain-01.png",
     "windows/services/checks-ad-dns-client/outputs/img/server2-checkConnectivity/server2-checkConnectivity-03.png",
     "windows/services/checks-ad-dns-client/outputs/img/server2-checkConnectivity/server2-checkConnectivity-02.png",

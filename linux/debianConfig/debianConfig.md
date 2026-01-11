@@ -11,18 +11,18 @@ The documentation is divided into two types of notes:
 - [networkInterfaces](/linux/debianConfig/serviceConfigurations/networkInterfaces.md) (networking)
 - [openssh](/linux/debianConfig/serviceConfigurations/openssh.md)
 - [Users Groups and Permissions](/linux/debianConfig/serviceConfigurations/usersGroupsPermissions.md)
-- [dhcp](/linux/debianConfig/serviceConfigurations/dhcp.md)
-- [dns](/linux/debianConfig/serviceConfigurations/dns.md)
+- [dhcp](linux/debianConfig/serviceConfigurations/dhcp/dhcp.md)
+- [dns](linux/debianConfig/serviceConfigurations/dns/dns.md)
 - [routing](/linux/debianConfig/serviceConfigurations/routing.md)
 - [ldap](/linux/debianConfig/serviceConfigurations/ldap.md)
-- [www](/linux/debianConfig/serviceConfigurations/www.md)
-- [docker](/linux/debianConfig/serviceConfigurations/docker.md)
-- [smb](/linux/debianConfig/serviceConfigurations/smb.md)
+- [www](linux/debianConfig/serviceConfigurations/www/www.md)
+- [docker](docker.md)
+- [smb](smb.md)
 - [backups](/linux/debianConfig/serviceConfigurations/backups.md) - Segurtasun kopiak
 - [task automatisations](/linux/debianConfig/serviceConfigurations/taskAutomatisations.md) - Ataza automatizazioa
 - cloud
 - [ssh tunnel](/linux/debianConfig/serviceConfigurations/sshTunnel.md)
-- [vpn](/linux/debianConfig/serviceConfigurations/vpn.md)
+- [vpn](vpn.md)
 - [example](/linux/debianConfig/serviceConfigurations/example.md) - Example template
 
 # Index - Configuration files

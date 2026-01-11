@@ -1,13 +1,13 @@
 ## **Linux**
 - [x] [networkInterfaces](/linux/debianConfig/serviceConfigurations/networkInterfaces.md) (not a service though)
 - [x] [openssh](/linux/debianConfig/serviceConfigurations/openssh.md)
-- [x] [dhcp](/linux/debianConfig/serviceConfigurations/dhcp.md)
-- [x] [dns](/linux/debianConfig/serviceConfigurations/dns.md)
+- [x] [dhcp](linux/debianConfig/serviceConfigurations/dhcp/dhcp.md)
+- [x] [dns](linux/debianConfig/serviceConfigurations/dns/dns.md)
 - [x] [routing](/linux/debianConfig/serviceConfigurations/routing.md)
 - [x] [ldap](/linux/debianConfig/serviceConfigurations/ldap.md)
-- [x] [www](/linux/debianConfig/serviceConfigurations/www.md)
-- [x] [docker](/linux/debianConfig/serviceConfigurations/docker.md)
-- [x] [smb](/linux/debianConfig/serviceConfigurations/smb.md)
+- [x] [www](linux/debianConfig/serviceConfigurations/www/www.md)
+- [x] [docker](docker.md)
+- [x] [smb](smb.md)
 - [x] [backups](/linux/debianConfig/serviceConfigurations/backups.md) - Segurtasun kopiak
 - [x] [task automatisations](/linux/debianConfig/serviceConfigurations/taskAutomatisations.md) - Ataza automatizazioa
 
