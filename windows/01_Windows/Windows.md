@@ -11,6 +11,10 @@ DomainName: enpresa.eus
 DomainNetName: ENPRESA
 AdminPassword: Admin123*
 ---
+# Index
+- [Powershell commands](/windows/01_Windows/PowerShell.md)
+- [Powershell additions](/windows/01_Windows/PowerShellAdditions.md)
+- [Active Directory OU Ariketak](/windows/01_Windows/ActiveDirectory/OUAriketak.md)
 # Sare konfigurazioa
 
 ## Bistaratu sare txarteleko konfigurazioak

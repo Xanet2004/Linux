@@ -1,5 +1,4 @@
 # Index
-- Atal ezberdinetan banatua 
 - Global Settings
 - Browsing/Identification
 - Networking

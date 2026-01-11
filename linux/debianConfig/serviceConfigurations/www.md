@@ -6,9 +6,9 @@ Apache2 Web page service.
 
 # File index
 - [/etc/apache2/ports.conf](/linux/debianConfig/configurationFiles/etc/apache2/ports.conf.md) - TCP port configurations
-- [/etc/apache2/sites-available](/linux/debianConfig/configurationFiles/etc/apache2/sites-available/.md) - Web configuration files
-- [/etc/apache2/sites-available/000-default.conf](/linux/debianConfig/configurationFiles/etc/apache2/sites-available/000-default.conf/.md) - Web configuration
-- [/etc/apache2/sites-available/default-ssl.conf](/linux/debianConfig/configurationFiles/etc/apache2/sites-available/default-ssl.conf/.md) - Configurations with TLS or DNS
+- [/etc/apache2/sites-available](/linux/debianConfig/configurationFiles/etc/apache2/sites-available.md) - Web configuration files
+- [/etc/apache2/sites-available/000-default.conf](/linux/debianConfig/configurationFiles/etc/apache2/sites-available/000-default.conf.md) - Web configuration
+- [/etc/apache2/sites-available/default-ssl.conf](/linux/debianConfig/configurationFiles/etc/apache2/sites-available/default-ssl.conf.md) - Configurations with TLS or DNS
 - [/etc/apache2/sites-enabled](/linux/debianConfig/configurationFiles/etc/apache2/sites-enabled.md)
 - [/etc/apache2/mods-available](/linux/debianConfig/configurationFiles/etc/apache2/mods-available.md)
 - [/etc/apache2/mods-enabled](/linux/debianConfig/configurationFiles/etc/apache2/mods-enabled.md)
