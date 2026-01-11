@@ -38,29 +38,9 @@
               "icon": "lucide-file",
               "title": "windows"
             }
-          },
-          {
-            "id": "26487e56eb79af4e",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "ca3b0f9f5f478464",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -241,23 +221,32 @@
       "bases:Create new base": false
     }
   },
-  "active": "ca3b0f9f5f478464",
+  "active": "750b2d3e4f0ec9c4",
   "lastOpenFiles": [
+    "windows/windows.md",
+    "linux/wireshark/wireshark.md",
+    "linux/wireshark/activities/DHCP/DHCP.pcapng",
+    "linux/wireshark/activities/DNS/DNS - DHCP bezeroaren kontsulta.pcapng",
+    "linux/wireshark/activities/DNS/DNS - cache EZ errekurtsiboa.pcapng",
+    "linux/wireshark/activities/DNS/DNS - cache errekurtsiboa.pcapng",
+    "linux/wireshark/activities/DNS/DNS - cache errekurtsibo eta berbidaltzailea.pcapng",
+    "linux/wireshark/activities/DNS/DNS - azpidomeinua 2.pcapng",
+    "linux/wireshark/activities/DNS/DNS - azpidomeinua 1.pcapng",
+    "linux/wireshark/activities/DNS/DNS - zona transferentzia.pcapng",
+    "linux/wireshark/activities/DNS/DNS - zona transferentzia DHCP.pcapng",
+    "linux/wireshark/activities/DNS/DNS - lehenetsia.pcapng",
+    "linux/linux.md",
+    "Untitled.md",
     "README.md",
     "kp/kp.md",
     "kp/notes/Linux.md",
-    "kp/notes",
-    "windows/windows.md",
     "linux/debianConfig/debianConfig.md",
     "todo.md",
     "kp/notes/Windows.md",
-    "kp",
     "linux/debianConfig/configurationFiles/etc/sysctl.conf.md",
     "linux/debianConfig/serviceConfigurations/www.md",
     "linux/debianConfig/serviceConfigurations/service/example.md",
-    "linux/debianConfig/serviceConfigurations/service",
     "linux/debianConfig/configurationFiles/etc/service/example.conf.md",
-    "linux/debianConfig/configurationFiles/etc/service",
     "linux/debianConfig/configurationFiles/etc/apache2/sites-available/000-default.conf.md",
     "linux/debianConfig/configurationFiles/etc/apache2/sites-available/default-ssl.conf.md",
     "windows/checks-ad-dns-client/outputs/img/server2-checkConnectivity/server2-checkConnectivity-02.png.md",
@@ -272,15 +261,6 @@
     "windows/services/checks-ad-dns-client/outputs/img/client-checkSession/client-checkSession-01.png",
     "windows/services/services.md",
     "windows/machineCreation/machineCreation.md",
-    "windows/services/activeDirectory/usersAndOUs.md",
-    "windows/services/checks-ad-dns-client/outputs/server1-checkConnectivity.md",
-    "windows/services/checks-ad-dns-client/outputs/server2-checkConnectivity.md",
-    "windows/active-directory/script",
-    "windows/active-directory",
-    "windows/checks-ad-dns-client/outputs/img/server2-checkConnectivity",
-    "windows/checks-ad-dns-client/outputs/img",
-    "windows/checks-ad-dns-client/outputs",
-    "windows/checks-ad-dns-client",
     "windows/services/checks-ad-dns-client/outputs/img/server1-checkDomain/server1-checkDomain-01.png",
     "windows/services/checks-ad-dns-client/outputs/img/server2-checkConnectivity/server2-checkConnectivity-03.png",
     "windows/services/checks-ad-dns-client/outputs/img/server2-checkConnectivity/server2-checkConnectivity-02.png",

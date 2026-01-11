@@ -4,4 +4,5 @@ This is an Obsidian vault where I will take my notes for the subject Linux
 - [Vbox](/linux/vbox/vbox.md)
 - [Installation](/linux/installation/installation.md)
 - [Debian Configurations](/linux/debianConfig/debianConfig.md)
+- [Wireshark](/linux/wireshark/wireshark.md)
 - [Activities](/linux/activities/activities.md)
