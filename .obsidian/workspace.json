@@ -54,8 +54,23 @@
               "icon": "lucide-file",
               "title": "Linux-dns-smb-apache2"
             }
+          },
+          {
+            "id": "0508715cf5e508a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "kp/notes/Linux-kp-reku-notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Linux-kp-reku-notes"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -120,17 +135,21 @@
             "id": "ee6371f09bc8157c",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "kp/notes/Linux-dns-smb-apache2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Linux-dns-smb-apache2"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 247.50418853759766
+    "width": 243.50499725341797
   },
   "right": {
     "id": "3bda3df6b02d79ee",
@@ -236,27 +255,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "7cc077576cdea5f7",
+  "active": "0508715cf5e508a9",
   "lastOpenFiles": [
     "linux/activities/vbox/01-zaldua1.md",
-    "linux/activities/activities.md",
-    "linux/linux.md",
+    "kp/notes/Linux-kp-reku-notes.md",
     "kp/notes/Linux-dns-smb-apache2.md",
+    "kp/notes/Linux-kp-reku-etxean.md",
+    "linux/debianConfig/configurationFiles/etc/bind/named.conf.options.md",
+    "linux/installation/installation.md",
+    "linux/installation/partitions.md",
+    "kp/kp.md",
+    "linux/debianConfig/debianConfig.md",
+    "linux/debianConfig/serviceConfigurations/dns/dns.md",
+    "linux/debianConfig/configurationFiles/etc/resolv.conf.md",
+    "linux/debianConfig/configurationFiles/etc/network/interfaces.md",
+    "linux/debianConfig/serviceConfigurations/dns/basicSlave.md",
+    "linux/debianConfig/serviceConfigurations/dns/basicMaster.md",
+    "linux/debianConfig/serviceConfigurations/dns/views.md",
+    "linux/debianConfig/serviceConfigurations/networkInterfaces.md",
+    "linux/vbox/vboxManage/modifyvm.md",
+    "linux/vbox/vboxManage/natnetwork.md",
+    "linux/debianConfig/serviceConfigurations/usersGroupsPermissions.md",
+    "linux/linux.md",
+    "linux/activities/activities.md",
     "linux/vbox/vbox.md",
     "windows/windows.md",
     "README.md",
-    "linux/debianConfig/debianConfig.md",
     "linux/debianConfig/serviceConfigurations/www/www.md",
     "linux/debianConfig/serviceConfigurations/smb/smb.md",
-    "linux/debianConfig/serviceConfigurations/smb/shareFolderSingleUser.md",
-    "linux/debianConfig/serviceConfigurations/networkInterfaces.md",
-    "linux/debianConfig/serviceConfigurations/dns/dns.md",
-    "linux/debianConfig/serviceConfigurations/dhcp/basicPrimary.md",
-    "linux/debianConfig/serviceConfigurations/dhcp/dhcp.md",
-    "kp/notes/Linux.md",
-    "linux/debianConfig/serviceConfigurations/backups.md",
-    "linux/debianConfig/serviceConfigurations/usersGroupsPermissions.md",
-    "linux/wireshark/wireshark.md",
     "linux/wireshark/activities/DHCP/DHCP.pcapng",
     "linux/wireshark/activities/DNS/DNS - DHCP bezeroaren kontsulta.pcapng",
     "linux/wireshark/activities/DNS/DNS - cache EZ errekurtsiboa.pcapng",
@@ -267,13 +293,6 @@
     "linux/wireshark/activities/DNS/DNS - zona transferentzia.pcapng",
     "linux/wireshark/activities/DNS/DNS - zona transferentzia DHCP.pcapng",
     "linux/wireshark/activities/DNS/DNS - lehenetsia.pcapng",
-    "Untitled.md",
-    "kp/kp.md",
-    "todo.md",
-    "kp/notes/Windows.md",
-    "linux/debianConfig/configurationFiles/etc/sysctl.conf.md",
-    "linux/debianConfig/serviceConfigurations/service/example.md",
-    "linux/debianConfig/configurationFiles/etc/service/example.conf.md",
     "windows/services/checks-ad-dns-client/outputs/img/server2-checkDomain/server2-checkDomain-02.png",
     "windows/services/checks-ad-dns-client/outputs/img/server1-checkDomain/server1-checkDomain-02.png",
     "windows/services/checks-ad-dns-client/outputs/img/client-checkSession/client-checkSession-01.png",

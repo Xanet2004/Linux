@@ -1,0 +1,1 @@
+[Partitions](/linux/installation/partitions.md)
