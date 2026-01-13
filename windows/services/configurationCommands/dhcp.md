@@ -36,3 +36,15 @@ Set-DhcpServerv4Scope -ScopeId "192.168.1.0" -LeaseDuration "8.00:00:00"
 # 8 days # Authorize the DHCP server in Active Directory 
 Add-DhcpServerInDC -DnsName "Server" -IpAddress "192.168.1.100"
 ```
+
+```powershell
+# firewall open on server1
+Get-NetFirewallRule | where {$_.DisplayName -like "*DHCP*"}
+Get-Service -Name dhcpserver
+Start-Service -Name dhcpserver
+Get-DhcpServerv4Scope
+```
+
+```powershell title="DHCP address"
+Set-NetIPInterface -InterfaceAlias "Ethernet" -Dhcp Enabled
+```

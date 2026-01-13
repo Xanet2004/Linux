@@ -198,6 +198,10 @@ Remove-SmbShare -Name "ShareName"
 mkdir C:\Shared\Dokumentuak
 
 New-Item -ItemType File -Name "kaixo.txt"
+
+Get-Content kaixo.txt
+
+Set-Content kaixo.txt -Value "new content"
 ```
 
 ## Share folder
@@ -235,6 +239,27 @@ $Path = "C:\SharedFolder\Path"
 $User = "Domain\UserOrGroup" 
 $Permission = "Read, Write" # Can be: Read, Write, Modify, FullControl, Delete, ExecuteFile, ListDirectory 
 $Inheritance = "ContainerInherit, ObjectInherit" # Fitxategi bat bada, None erabili 
+$Type = "Allow" # Use "Deny" to explicitly block access 
+
+# 1. Get the existing ACL 
+$Acl = Get-Acl -Path $Path 
+
+# 2. Create the new Access Rule 
+$AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule( $User, $Permission, $Inheritance, "None", $Type ) 
+
+# 3. Add the new rule to the ACL 
+$Acl.AddAccessRule($AccessRule) 
+
+# 4. Apply the modified ACL 
+Set-Acl -Path $Path -AclObject $Acl
+
+
+
+
+$Path = "C:\Users\Administrator\Shared\BLAHAJ\federiko" 
+$User = "imaritxalar" 
+$Permission = "Read" # Can be: Read, Write, Modify, FullControl, Delete, ExecuteFile, ListDirectory 
+$Inheritance = "None" # Fitxategi bat bada, None erabili 
 $Type = "Allow" # Use "Deny" to explicitly block access 
 
 # 1. Get the existing ACL 
