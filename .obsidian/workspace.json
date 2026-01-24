@@ -8,17 +8,48 @@
         "type": "tabs",
         "children": [
           {
+<<<<<<< HEAD
             "id": "bf128613bc9fbc4c",
+=======
+            "id": "7cc077576cdea5f7",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
+                "file": "linux/linux.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "linux"
+            }
+          },
+          {
+            "id": "0ee41b91de3d891f",
+>>>>>>> 024f319dda3f3829953750e78971b070c7269492
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+<<<<<<< HEAD
                 "file": "linux/debianConfig/serviceConfigurations/dhcp/dhcp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "dhcp"
+=======
+                "file": "linux/activities/vbox/01-zaldua1.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "01-zaldua1"
+>>>>>>> 024f319dda3f3829953750e78971b070c7269492
             }
           },
           {
@@ -35,7 +66,12 @@
               "title": "vbox"
             }
           }
+<<<<<<< HEAD
         ]
+=======
+        ],
+        "currentTab": 1
+>>>>>>> 024f319dda3f3829953750e78971b070c7269492
       }
     ],
     "direction": "vertical"
@@ -47,7 +83,7 @@
       {
         "id": "dd91bc8db40028a0",
         "type": "tabs",
-        "dimension": 74.79861910241657,
+        "dimension": 77.30125523012552,
         "children": [
           {
             "id": "750b2d3e4f0ec9c4",
@@ -94,23 +130,23 @@
       {
         "id": "afcdc08298a854aa",
         "type": "tabs",
-        "dimension": 25.201380897583427,
+        "dimension": 22.698744769874473,
         "children": [
           {
             "id": "ee6371f09bc8157c",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 247.50418853759766
+    "width": 243.50499725341797
   },
   "right": {
     "id": "3bda3df6b02d79ee",
@@ -216,6 +252,7 @@
       "bases:Create new base": false
     }
   },
+<<<<<<< HEAD
   "active": "bf128613bc9fbc4c",
   "lastOpenFiles": [
     "linux/vbox/vbox.md",
@@ -230,6 +267,10 @@
     "kp/notes/Linux-dns-smb-apache2.md",
     "kp/notes/windows-kp/Windows-script.md",
     "linux/installation/partitions.md",
+=======
+  "active": "750b2d3e4f0ec9c4",
+  "lastOpenFiles": [
+>>>>>>> 024f319dda3f3829953750e78971b070c7269492
     "kp/notes/windows-kp/Windows.md",
     "kp/notes/windows-kp",
     "kp/notes/linux-kp/Linux-kp-reku-notes.md",
@@ -238,6 +279,7 @@
     "kp/notes/linux-kp",
     "windows/scripts/scripts.md",
     "windows/scripts",
+<<<<<<< HEAD
     "windows/windows.md",
     "windows/services/services.md",
     "windows/services/configurationCommands/activeDirectory.md",
@@ -248,12 +290,39 @@
     "windows/services/configurationCommands/gpo.pdf",
     "linux/linux.md",
     "windows/machineCreation/machineCreation.md",
+=======
+    "linux/activities/vbox/01-zaldua1.md",
+    "kp/notes/Linux-kp-reku-notes.md",
+    "kp/notes/Linux-dns-smb-apache2.md",
+    "kp/notes/Linux-kp-reku-etxean.md",
+    "linux/debianConfig/configurationFiles/etc/bind/named.conf.options.md",
+    "linux/installation/installation.md",
+    "linux/installation/partitions.md",
+    "kp/kp.md",
+    "linux/debianConfig/debianConfig.md",
+    "linux/debianConfig/serviceConfigurations/dns/dns.md",
+    "linux/debianConfig/configurationFiles/etc/resolv.conf.md",
+    "linux/debianConfig/configurationFiles/etc/network/interfaces.md",
+    "linux/debianConfig/serviceConfigurations/dns/basicSlave.md",
+    "linux/debianConfig/serviceConfigurations/dns/basicMaster.md",
+    "linux/debianConfig/serviceConfigurations/dns/views.md",
+    "linux/debianConfig/serviceConfigurations/networkInterfaces.md",
+    "linux/vbox/vboxManage/modifyvm.md",
+    "linux/vbox/vboxManage/natnetwork.md",
+    "linux/debianConfig/serviceConfigurations/usersGroupsPermissions.md",
+    "linux/linux.md",
+    "linux/activities/activities.md",
+>>>>>>> 024f319dda3f3829953750e78971b070c7269492
     "linux/wireshark/activities/DHCP/DHCP.pcapng",
     "linux/wireshark/activities/DNS/DNS - DHCP bezeroaren kontsulta.pcapng",
     "linux/wireshark/activities/DNS/DNS - cache EZ errekurtsiboa.pcapng",
     "linux/wireshark/activities/DNS/DNS - cache errekurtsiboa.pcapng",
     "linux/wireshark/activities/DNS/DNS - cache errekurtsibo eta berbidaltzailea.pcapng",
     "linux/wireshark/activities/DNS/DNS - azpidomeinua 2.pcapng",
+<<<<<<< HEAD
+=======
+    "linux/wireshark/activities/DNS/DNS - azpidomeinua 1.pcapng",
+>>>>>>> 024f319dda3f3829953750e78971b070c7269492
     "windows/services/checks-ad-dns-client/outputs/img/server2-checkDomain/server2-checkDomain-02.png",
     "windows/services/checks-ad-dns-client/outputs/img/server1-checkDomain/server1-checkDomain-02.png",
     "windows/services/checks-ad-dns-client/outputs/img/client-checkSession/client-checkSession-01.png",
