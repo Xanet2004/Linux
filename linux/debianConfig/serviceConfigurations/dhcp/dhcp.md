@@ -8,6 +8,9 @@ DHCP Automatically assigns IP addresses and network settings to devices on a net
 - [/etc/dhcp/dhcpd.conf](/linux/debianConfig/configurationFiles/etc/dhcp/dhcpd.conf.md) – Main DHCP configuration file
 - [/etc/dhcpcd.conf](/linux/debianConfig/configurationFiles/etc/dhcpcd.conf.md) - Change DNS on this file after configuring a DNS server IF **this is a DHCP server**.
 
+> Important!!!!!
+> If you are having trouble with DHCP client refusing to take the leased IP, you probably have a vbox dhcp on!
+> to fix this go see this file: [fix vbox dhcp](/linux/vbox/vboxManage/fixDhcp.md)
 # Installation
 
 ```powershell title="installation"

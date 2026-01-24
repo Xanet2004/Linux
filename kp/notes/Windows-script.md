@@ -10,7 +10,7 @@ Import-Module ActiveDirectory
 
 # TODO: CSV fitxategiaren path-a eta erabiltzaileak sortuko diren OU-a definitu.
 $csvPath = "C:\Users\Administrator\Documents\langileak.csv"
-$targetOU = "CN=Users,DC=GARAIA,DC=corp"
+$targetOU = "OU=Users,DC=GARAIA,DC=corp"
 
 # CSV fitxategia irakurri
 $users = Import-Csv -Path $csvPath

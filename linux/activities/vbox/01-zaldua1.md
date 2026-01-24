@@ -349,6 +349,8 @@ option domain-name-servers 192.168.42.2, 192.168.44.4;
 default-lease-time 600;
 max-lease-time 7200;
 
+authoritative;
+
 failover peer "dhcp-failover" {
     primary;                    # this is the primary
     address 192.168.44.4;       # primary server IP

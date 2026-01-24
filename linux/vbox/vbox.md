@@ -16,6 +16,10 @@ This folder will take notes about VBox configurations.
 > Important
 > Nat network won't work if we are using inet (internal net) interfaces
 
+> Important!!!!!
+> If you are having trouble with DHCP client refusing to take the leased IP, you probably have a vbox dhcp on!
+> to fix this go see this file: [fix vbox dhcp](/linux/vbox/vboxManage/fixDhcp.md)
+
 ```powershell title="inet interface declaration"
 vboxmanage modifyvm "zalduazerb1" --nic7 intnet --mac-address7 000102030107 --intnet7 zaldua1
 ```
